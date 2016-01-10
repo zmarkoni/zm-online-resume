@@ -1,0 +1,15 @@
+// ***********************************
+// scrollWatch
+// ***********************************
+
+.h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 200px 0;
+    transition: color 1s;
+}
+
+.h2.scroll-watch-in-view {
+    color:red;
+}
+

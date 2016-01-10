@@ -5,9 +5,13 @@
 /////////// Ovo mi je u stvari DIST gde pozivam sve js fajlove
 
 //Test
-var test123 = require('./script/modules/test/test.js');
+var test = require('./script/modules/test.js');
+test('Hi Zoran Markovic');
 
-test123('Hi Zoran Markovic');
+var scrollWatch = require('./script/modules/scroll-watch.js');
+
+scrollWatch();
+
 
 
 console.log('javascript reporting in from app.js ...');
