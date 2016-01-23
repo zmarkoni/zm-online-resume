@@ -2,14 +2,20 @@
 // scrollWatch
 // ***********************************
 
+h1,h2,h3,h4 {
+  &.active {
+    font-size: 3em;
+    transition: color 1s;
+  }
+  &.scroll-watch-in-view {
+      color:red;
+  }
+}
+
+
+
 .h2 {
     text-align: center;
     font-size: 2em;
-    margin: 200px 0;
-    transition: color 1s;
+    margin: 200px 0;    
 }
-
-.h2.scroll-watch-in-view {
-    color:red;
-}
-
