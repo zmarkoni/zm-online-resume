@@ -1,7 +1,7 @@
 var $ = require('jquery');
 
 //REVEALING MODULE PATTERN
-module.exports = (function(){
+var Model = function() {
     var name = "Zoran Markovic";
     var greetings = "Hi";
 
@@ -29,5 +29,5 @@ module.exports = (function(){
       updatePlaceholder : updatePlaceholder
     };
 
-
-})();
+}
+module.exports = Model;
