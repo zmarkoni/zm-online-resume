@@ -17,7 +17,7 @@ a:hover, a:active, a:focus {
 // TYPOGRAPHY
 // ***********************************
 h1,h2,h3,h4,h5,h6 {
-	font-family: $font-family-title;
+	font-family: $font-family-primary;
 	text-transform: uppercase;
 	line-height: 1em;
 	clear: both;
@@ -26,13 +26,13 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: $font-weight-title;
 }
 
-h1 { 
+h1 {
 	letter-spacing: -1px;
 	font-weight: 900;
 }
 
 h2 {
-	
+
 }
 
 p {
@@ -40,4 +40,3 @@ p {
 	font-size: 14px;
 	line-height: 1.6em;
 }
-

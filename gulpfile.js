@@ -11,7 +11,8 @@ var assign        = require('lodash.assign');
 var browserSync   = require('browser-sync');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
-
+var imagemin      = require('gulp-imagemin');
+var size          = require('gulp-size');
 
 
 // ////////////////////////////////////////////////
@@ -93,6 +94,17 @@ gulp.task('styles', function() {
 });
 
 
+gulp.task('images', function() {
+  gulp.src('src/img/**/*.{jpg,jpeg,png,gif}') //all styles are included in style.scss
+    .pipe(imagemin({
+      optimizationLevel: 3,
+      progessive: true,
+      interlaced: true
+    }))
+    .pipe(gulp.dest('public/img'))
+    .pipe(size())
+    .pipe(browserSync.reload({stream:true}));
+});
 
 
 // ////////////////////////////////////////////////
@@ -105,5 +117,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['js', 'styles', 'browserSync', 'watch']);
-
+gulp.task('default', ['js', 'styles', 'images' ,'browserSync', 'watch']);

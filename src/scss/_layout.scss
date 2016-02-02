@@ -2,22 +2,72 @@
 // LAYOUT
 // ***********************************
 
-// Flex Grid Rows
-.container{
-	max-width: 90%;
-	margin: 0px auto;
-	//background: #cccbc9;
+$container_width        : 960px;
+$container_max_width    : 1024px;
+
+.container {
+    position: relative;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left:  0;
+    padding-right: 0;
+    width: 100%;
+    /* z-index:$z1; It can't have z-index because of tour'*/
+
+    @include breakpoint(greaterthansmall) {
+        width: $container_width;
+    }
+
+    @include breakpoint(tabletbig) {
+        width: 800px;
+        padding-left:  20px;
+        padding-right: 20px;
+    }
+}/*END container*/
+
+.col_one {
+
+    width: 100%;
+    margin:0 auto;
+
+    @include breakpoint(greaterthansmall) {
+        width: $container_width;
+    }
+    @include breakpoint(tabletbig) {
+        width: 640px;
+    }
+
+}
+//////////////////////////// col left /////////////////////////////////////////
+@mixin col_left {
+  width:100%;
+  display:none;
+  @include breakpoint(greaterthansmall) {
+      display:block;
+      width:300px;
+      float: left;
+  }
+}
+.left-column,
+.col_left {
+    @include col_left;
 }
 
-.row{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -10px 10px;
+//////////////////////////// col mid /////////////////////////////////////////
+@mixin col_mid {
+  width:100%;
+  @include breakpoint(greaterthansmall) {
+      width: 630px;
+      float: right;
+  }
+  @include breakpoint(tabletbig) {
+      width: 60%;
+      float: right;
+  }
 }
 
-.row > *{
-	background: #F4F3F0;
-	flex: 1;
-	margin: 0 10px;
-	//padding: 10px 10px;
+.mid-column,
+.col_mid {
+    @include col_mid;
 }

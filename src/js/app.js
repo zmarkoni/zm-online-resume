@@ -8,8 +8,8 @@ var testRunner = require('./script/modules/test/runner.js');
 
 var Application = function() {
 
-    testRunner();
-//   scrollRunner();
+    //testRunner();
+    //scrollRunner();
 
 };
 

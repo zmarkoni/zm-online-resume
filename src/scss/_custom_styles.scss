@@ -1,18 +1,24 @@
 // ***********************************
 // Custom styles
 // ***********************************
-
 .watch-container {
-    font-size: 2em;
-    width: 75%;
-    height: 150px;
-    padding: 20px;
-    margin: 50px auto;
-    background-color: #0681CD;
-    color: #fff;
-    overflow: auto;
-    text-align: center;
-
+  font-size: 2em;
+  width: 75%;
+  height: 150px;
+  padding: 20px;
+  margin: 50px auto;
+  background-color: #0681CD;
+  color: #fff;
+  overflow: auto;
+  text-align: center;
 }
+.header {
+  float: left;
+  width: 100%;
+  height: 200px;
+  background-color: #14181f;
 
-
+  .nav {
+    display: none;
+  }
+}

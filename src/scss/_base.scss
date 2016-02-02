@@ -13,17 +13,13 @@ html {
 }
 
 body{
-	color: $body-text;
 	margin: 0;
 	padding: 0;
-	background: #fff;
 	font-weight: $font-weight-body;
 	font-family: $font-family-primary;
-
-    // media query mixin, see _mixins.scss
-    @include desktop {
-        background: lightskyblue;
-    }
+  color: $body-text;
+  background: $body-bg;
+  font-size: 14px;
 }
 
 hr {
@@ -32,8 +28,4 @@ hr {
     clear: both;
     height: 0;
     margin: 40px 0;
-}
-
-section {
-    height:500px;
 }
