@@ -5,6 +5,16 @@
 $container_width        : 960px;
 $container_max_width    : 1024px;
 
+body{
+	margin: 0;
+	padding: 0;
+	font-weight: $font-weight-body;
+	font-family: $font-family-primary;
+  color: $body-text;
+  background: $body-bg;
+  font-size: 14px;
+}
+
 .container {
     position: relative;
     clear: both;
@@ -70,4 +80,8 @@ $container_max_width    : 1024px;
 .mid-column,
 .col_mid {
     @include col_mid;
+}
+
+.section {
+    height:800px;
 }

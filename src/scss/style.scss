@@ -1,61 +1,29 @@
 // ***********************************
-// IMPORTS
-// Import susy, breakpoint, resets and grids
+// BOOTSTRAP
 // ***********************************
-@import "ui/reset";
-
-
+@import "../../node_modules/bootstrap/dist/css/bootstrap";
 
 // ***********************************
-// HELPERS
+// Normalize Reset
 // ***********************************
-@import "variables";
-@import "mixins";
-
-
-
-// // ***********************************
-// // BASE STYLES
-// // ***********************************
-@import "base";
-@import "layout";
-@import "typography"; // typography and links
-@import "media";
-
-
+@import "base/reset";
 
 // ***********************************
-// UI ELEMENTS
+// BASE STYLES
 // ***********************************
-@import "ui/lists";
-@import "ui/buttons";
-// @import "ui/tables";
-// @import "ui/forms";
-// @import "ui/code";
-// @import "ui/panels";
-// @import "ui/cards";
-
-
-
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography"; // typography and links
+@import "base/media";
+@import "base/layout";
 
 // ***********************************
-// Navigation
+// Custom styles
 // ***********************************
-// @import "navigation";
-
-
-
-
-// ***********************************
-// ScrollWatch
-// ***********************************
-@import "scroll_watch";
-
-
-
-
-// ***********************************
-// app custom styles
-// ***********************************
-@import "custom_styles";
-@import "logo";
+@import "components/custom_buttons";
+@import "components/header";
+@import "components/logo";
+@import "components/navigation";
+@import "components/content";
+@import "components/scroll_watch";
+@import "components/footer";

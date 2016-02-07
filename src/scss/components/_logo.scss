@@ -1,33 +1,34 @@
 .text_logo {
-  display: block;
+  display: none;;
   float: left;
   margin-top: 40px;
   margin-left: 0;
   font: bold 35px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $color1;
-  // animation: text_logo_animation 10s ease 1;
-  // animation-iteration-count: 1;
-  // animation-fill-mode: forwards;
-  // opacity: 0.1;
+  .blink {
+    animation:5s linear 3s normal none infinite text_logo_animation;
+  }
 }
+
 @keyframes text_logo_animation {
   0% {
-    opacity: 0.1;
+    opacity: 0.5;
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
   }
 }
 .animated_logo {
+    display: none;
   $slack-size: 100px;
   $dot-diameter: 10px;
   $slack-angle: 15deg;
   $animation-duration: 5s;
   $animation-delay:1s;
-  $slack-blue: #00afd8;
-  $slack-yellow: #f7931c;
-  $slack-pink: #e01563;
-  $slack-green: #3eb991;
+  $slack-blue: $info;
+  $slack-yellow: $warning;
+  $slack-pink: $danger;
+  $slack-green: $success;
 
   position: relative;
   float: left;
