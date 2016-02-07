@@ -6,35 +6,31 @@ $container_width        : 960px;
 $container_max_width    : 1024px;
 
 body{
-	margin: 0;
-	padding: 0;
-	font-weight: $font-weight-body;
 	font-family: $font-family-primary;
-  color: $body-text;
-  background: $body-bg;
-  font-size: 14px;
+    color: $body-text;
+    background: $body-bg;
 }
 
-.container {
-    position: relative;
-    clear: both;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left:  0;
-    padding-right: 0;
-    width: 100%;
-    /* z-index:$z1; It can't have z-index because of tour'*/
-
-    @include breakpoint(greaterthansmall) {
-        width: $container_width;
-    }
-
-    @include breakpoint(tabletbig) {
-        width: 800px;
-        padding-left:  20px;
-        padding-right: 20px;
-    }
-}/*END container*/
+// .container {
+//     position: relative;
+//     clear: both;
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding-left:  0;
+//     padding-right: 0;
+//     width: 100%;
+//
+//
+//     @include breakpoint(greaterthansmall) {
+//         width: $container_width;
+//     }
+//
+//     @include breakpoint(tabletbig) {
+//         width: 800px;
+//         padding-left:  20px;
+//         padding-right: 20px;
+//     }
+// }
 
 .col_one {
 

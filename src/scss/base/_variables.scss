@@ -39,14 +39,14 @@ $line-height-mobile: 1.625;
 
 
 // COLORS
-$body-text:  #979EAE;
+$body-text:  #000;
 
 $color1:     $body-text;
 $color2:     #4d5461;  // green
 $color3:     #00afd8;  // blue
 
 $success:    #3eb991; // green
-$info:       #00afd8; // blue
+$info:       #0068D8; // blue
 $warning:    #f7931c; // orange
 $danger:     #e01563; //red
 
@@ -74,7 +74,7 @@ $button2-color-disabled: $button2-color;
 
 // BACKGROUNDS
 
-$body-bg: #1c202a;
+$body-bg: #fff;
 $bg1: $body-bg;
 $bg2: #14181f;
 $bg3: #aaafb9;
