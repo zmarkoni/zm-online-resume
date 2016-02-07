@@ -29,9 +29,12 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "events": "^1.1.0",
     "inherits": "^2.0.1",
     "jquery": "^2.1.4",
+    "jquery-easing": "0.0.1",
+    "jquery-smooth-scroll": "^1.7.2",
     "scrollwatch": "^1.1.0"
   }
 }
