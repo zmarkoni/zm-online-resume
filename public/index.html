@@ -12,51 +12,7 @@
 </head>
 
 <body id="app" data-spy="scroll" data-target="#navbar-example">
-    <header id="intro" class="header parallax">
-        <div class="animated_logo">
-            <span class="logo_dot dot_1"></span>
-            <span class="logo_dot dot_2"></span>
-            <span class="logo_dot dot_3"></span>
-            <span class="logo_dot dot_4"></span>
-            <span class="logo_dot dot_5"></span>
-            <span class="logo_dot dot_6"></span>
-            <span class="logo_dot dot_7"></span>
-            <span class="logo_dot dot_8"></span>
-        </div>
-
-        <a href="#profile" class="nav_link scroll_down">
-            <div id="mice">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div>
-                    <span class="unu"></span>
-                    <span class="doi"></span>
-                </div>
-            </div>
-        </a>
-    </header>
-
-    <!-- <div class="text_logo_wrap">
-        <div class="text_logo">
-            <p class="text my_name">Zoran Marković</p>
-            <p class="text resume_text">Interactive resume
-                <span>|</span>
-            </p>
-        </div>
-    </div> -->
-
-    <div class="navigation">
-        <div class="animated_logo">
-            <span class="logo_dot dot_1"></span>
-            <span class="logo_dot dot_2"></span>
-            <span class="logo_dot dot_3"></span>
-            <span class="logo_dot dot_4"></span>
-            <span class="logo_dot dot_5"></span>
-            <span class="logo_dot dot_6"></span>
-            <span class="logo_dot dot_7"></span>
-            <span class="logo_dot dot_8"></span>
-        </div>
+    <header class="header">
         <nav class="navbar navbar-default" id="navbar-example" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -71,58 +27,122 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a class="nav_link" href="#intro">Home</a></li>
-                    <li><a class="nav_link" href="#profile">Profile</a></li>
-                    <li><a class="nav_link" href="#experiences">Experiences</a></li>
-                    <li><a class="nav_link" href="#abilities">Abilities</a></li>
-                    <li><a class="nav_link" href="#contact">Contact</a></li>
+                    <li class="active"><a class="nav_link" href="#app"><i class="fa fa-home"></i></a></li>
+                    <li><a class="nav_link" href="#profile"><i class="fa fa-user"></i></a></li>
+                    <li><a class="nav_link" href="#education"><i class="fa fa-graduation-cap"></i></a></li>
+                    <li><a class="nav_link" href="#experiance"><i class="fa fa-cogs"></i></a></li>
+                    <li><a class="nav_link" href="#abilities"><i class="fa fa-code"></i></a></li>
+                    <li><a class="nav_link" href="#contact"><i class="fa fa-envelope-o"></i></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-    </div>
+    </header>
 
     <main class="main">
-        <section id="profile" class="section profile">
-            <div class="container">
-                <h2 class="h2" data-scroll-watch>Header 1</h2>
-                <div class="text_logo_wrap">
-                    <div class="text_logo">
+        <div class="page_header">
+            <div class="parallax">
+                <div class="header_bg">
+                    <div class="sunny"></div>
+                    <div class="cloudy cloudy_1"></div>
+                    <div class="cloudy cloudy_2"></div>
+                    <div class="cloudy cloudy_3"></div>
+                    <div class="cloudy cloudy_4"></div>
+                    <div class="cloudy cloudy_5"></div>
+                    <!-- <div class="rainbow"></div> -->
+
+                    <div class="text_logo animated_text">
                         <p class="text my_name">Zoran Marković</p>
                         <p class="text resume_text">Interactive resume
                             <span>|</span>
                         </p>
                     </div>
+
+                    <!-- <div class="animated_text">
+                        <p class="text my_name">Zoran Marković</p>
+                        <p class="text resume_text">Interactive resume
+                            <span>|</span>
+                        </p>
+                    </div> -->
+
+                    <div class="animated_logo">
+                        <span class="logo_dot dot_1"></span>
+                        <span class="logo_dot dot_2"></span>
+                        <span class="logo_dot dot_3"></span>
+                        <span class="logo_dot dot_4"></span>
+                        <span class="logo_dot dot_5"></span>
+                        <span class="logo_dot dot_6"></span>
+                        <span class="logo_dot dot_7"></span>
+                        <span class="logo_dot dot_8"></span>
+                    </div>
+
+                    <div class="navigation">
+                        <div class="animated_logo">
+                            <span class="logo_dot dot_1"></span>
+                            <span class="logo_dot dot_2"></span>
+                            <span class="logo_dot dot_3"></span>
+                            <span class="logo_dot dot_4"></span>
+                            <span class="logo_dot dot_5"></span>
+                            <span class="logo_dot dot_6"></span>
+                            <span class="logo_dot dot_7"></span>
+                            <span class="logo_dot dot_8"></span>
+                        </div>
+
+                    </div>
+
+                    <a href="#profile" class="nav_link scroll_down">
+                        <div id="mice">
+                            <div class="mouse">
+                                <div class="wheel"></div>
+                            </div>
+                            <div>
+                                <span class="unu"></span>
+                                <span class="doi"></span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div id="placeholder" class="">
 
+                </section>
+            </div>
+        </div>
+        <div class="page_wrapper">
+            <section id="profile" class="section profile">
+                <div class="container">
+                    <h2 class="h2" data-scroll-watch>profile</h2>
+                    <div id="placeholder" class=""></div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="experiences" class="section experiences">
-            <div class="container">
-                <h2 class="h2" data-scroll-watch>Header 2</h2>
-            </div>
-        </section>
+            <section id="education" class="section education">
+                <div class="container">
+                    <h2 class="h2" data-scroll-watch>education</h2>
+                </div>
+            </section>
 
-        <section id="abilities" class="section abilities">
-            <div class="container">
-                <h2 class="h2" data-scroll-watch>Header 3</h2>
-            </div>
-        </section>
+            <section id="experiance" class="section experiance">
+                <div class="container">
+                    <h2 class="h2" data-scroll-watch>experiance</h2>
+                </div>
+            </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="h2" data-scroll-watch>Header 4</h2>
-            </div>
-        </section>
+            <section id="abilities" class="section abilities">
+                <div class="container">
+                    <h2 class="h2" data-scroll-watch>abilities</h2>
+                </div>
+            </section>
 
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <h2 class="h2" data-scroll-watch>contact</h2>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            footer
+            <i class="fa fa-copyright"></i> Zoran Markovic 2016
         </div>
     </footer>
     <script src='js/main.js'></script>
