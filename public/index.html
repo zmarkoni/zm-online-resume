@@ -12,11 +12,11 @@
 </head>
 
 <body id="app" data-spy="scroll" data-target="#navbar-example">
-    <header class="header">
+    <header class="js_header header">
         <nav class="navbar navbar-default" id="navbar-example" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <button type="button" class="js_mobile_menu navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -26,14 +26,40 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
+                <div class="animated_logo first">
+                    <span class="logo_dot dot_1"></span>
+                    <span class="logo_dot dot_2"></span>
+                    <span class="logo_dot dot_3"></span>
+                    <span class="logo_dot dot_4"></span>
+                    <span class="logo_dot dot_5"></span>
+                    <span class="logo_dot dot_6"></span>
+                    <span class="logo_dot dot_7"></span>
+                    <span class="logo_dot dot_8"></span>
+                </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a class="nav_link" href="#app"><i class="fa fa-home"></i></a></li>
-                    <li><a class="nav_link" href="#profile"><i class="fa fa-user"></i></a></li>
-                    <li><a class="nav_link" href="#education"><i class="fa fa-graduation-cap"></i></a></li>
-                    <li><a class="nav_link" href="#experiance"><i class="fa fa-cogs"></i></a></li>
-                    <li><a class="nav_link" href="#abilities"><i class="fa fa-code"></i></a></li>
-                    <li><a class="nav_link" href="#contact"><i class="fa fa-envelope-o"></i></a></li>
+                    <li class="active"><a class="nav_link" href="#app"><i class="fa fa-home"></i>Home</a>
+                        <span></span>
+                    </li>
+                    <li><a class="js_nav_link nav_link" href="#profile"><i class="fa fa-user"></i>Profile</a>
+                        <span></span>
+                    </li>
+                    <li><a class="js_nav_link nav_link" href="#experiance"><i class="fa fa-cogs"></i>Experiance</a>
+                        <span></span>
+                    </li>
+                    <li><a class="js_nav_link nav_link" href="#education"><i class="fa fa-graduation-cap"></i>Education</a>
+                        <span></span>
+                    </li>
+
+                    <li><a class="js_nav_link nav_link" href="#abilities"><i class="fa fa-code"></i>Abilities</a>
+                        <span></span>
+                    </li>
+                    <li><a class="js_nav_link nav_link" href="#contact"><i class="fa fa-envelope-o"></i>Contact</a>
+                        <span></span>
+                    </li>
                 </ul>
+                <div class="last">
+                    <a href="https://rs.linkedin.com/in/zoranzokimarkovic" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
@@ -43,15 +69,14 @@
         <div class="page_header">
             <div class="parallax">
                 <div class="header_bg">
-                    <div class="sunny"></div>
+                    <!-- <div class="sunny"></div>
                     <div class="cloudy cloudy_1"></div>
                     <div class="cloudy cloudy_2"></div>
                     <div class="cloudy cloudy_3"></div>
                     <div class="cloudy cloudy_4"></div>
-                    <div class="cloudy cloudy_5"></div>
-                    <!-- <div class="rainbow"></div> -->
+                    <div class="cloudy cloudy_5"></div> -->
 
-                    <div class="text_logo animated_text">
+                    <div class="text_logo">
                         <p class="text my_name">Zoran Marković</p>
                         <p class="text resume_text">Interactive resume
                             <span>|</span>
@@ -64,34 +89,8 @@
                             <span>|</span>
                         </p>
                     </div> -->
-
-                    <div class="animated_logo">
-                        <span class="logo_dot dot_1"></span>
-                        <span class="logo_dot dot_2"></span>
-                        <span class="logo_dot dot_3"></span>
-                        <span class="logo_dot dot_4"></span>
-                        <span class="logo_dot dot_5"></span>
-                        <span class="logo_dot dot_6"></span>
-                        <span class="logo_dot dot_7"></span>
-                        <span class="logo_dot dot_8"></span>
-                    </div>
-
-                    <div class="navigation">
-                        <div class="animated_logo">
-                            <span class="logo_dot dot_1"></span>
-                            <span class="logo_dot dot_2"></span>
-                            <span class="logo_dot dot_3"></span>
-                            <span class="logo_dot dot_4"></span>
-                            <span class="logo_dot dot_5"></span>
-                            <span class="logo_dot dot_6"></span>
-                            <span class="logo_dot dot_7"></span>
-                            <span class="logo_dot dot_8"></span>
-                        </div>
-
-                    </div>
-
-                    <a href="#profile" class="nav_link scroll_down">
-                        <div id="mice">
+                    <a href="#profile" class="mouse_scroll_down js_scroll_down">
+                        <div id="mouse">
                             <div class="mouse">
                                 <div class="wheel"></div>
                             </div>
@@ -107,22 +106,193 @@
             </div>
         </div>
         <div class="page_wrapper">
-            <section id="profile" class="section profile">
+            <section id="profile" class="section profile_section">
                 <div class="container">
-                    <h2 class="h2" data-scroll-watch>profile</h2>
-                    <div id="placeholder" class=""></div>
+                    <div class="profile_description">
+                        <h2 class="h2" data-scroll-watch>Profile</h2>
+                        <p class="lead">I'm a Front End developer</p>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 about_me">
+                            <h3>About me</h3>
+                            <p>
+                                I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. Also I like working in
+                                a team, you'll learn faster and more. As the saying goes: 'two heads are better than one'.
+                            </p>
+                            <p>
+                                Work smarter not harder
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="profile_img " src="../img/profile.jpg" alt="Zoran Markovic">
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Details</h3>
+                            <p>
+                                <strong>Name:</strong>
+                                <br> Zoran Markovic
+                                <br>
+                                <strong>Age:</strong>
+                                <br> 33 years
+                                <br>
+                                <strong>Location:</strong>
+                                <br> Novi Sad, Serbia, Earth
+                                <br>
+                                <a href="https://rs.linkedin.com/in/zoranzokimarkovic" target="_blank">Linked <i class="fa fa-linkedin"></i></a>
+                            </p>
+
+
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-            <section id="education" class="section education">
-                <div class="container">
-                    <h2 class="h2" data-scroll-watch>education</h2>
-                </div>
-            </section>
-
-            <section id="experiance" class="section experiance">
+            <section id="experiance" class="section experiance_section">
                 <div class="container">
                     <h2 class="h2" data-scroll-watch>experiance</h2>
+                    <p class="lead">
+                        “Protons give an atom its identity, electrons its personality.”
+                        <br>- Bill Bryson, A short history of nearly everything
+                    </p>
+
+                    <hr>
+                    <h3>Careers</h3>
+                    <div class="experiences">
+                        <div class="experience row">
+                            <div class="col-md-4">
+                                <h4>Codeplicity</h4>
+                                <p class="experience-period">
+                                    March 2015 – Present
+                                </p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Front-End Developer</h3>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        Australian company
+                                        As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.
+                                        <br>
+                                        <span class="location"><i class="fa fa-map-marker"></i> Novi Sad, Serbia</span>
+                                        <span class="seperator">|</span>
+                                        <span><a href="http://codeplicity.com/" target="_blank"><i class="fa <fa-external-link>"></i>http://codeplicity.com/</a> </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience row">
+                            <div class="col-md-4">
+                                <h4>LTF International</h4>
+                                <p class="experience-period">
+                                    September 2012 – January 2015
+                                </p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Front-End Developer</h3>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.
+                                        <br>
+                                        <span class="location"><i class="fa fa-map-marker"></i> Novi Sad, Serbia</span>
+                                        <span class="seperator">|</span>
+                                        <span><a href="http://www.gallantdigital.com/" target="_blank"><i class="fa <fa-external-link>"></i>http://www.gallantdigital.com/</a> </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience row">
+                            <div class="col-md-4">
+                                <h4>Innovagency</h4>
+                                <p class="experience-period">
+                                    January 2012 – August 2012
+                                </p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Front-End Developer</h3>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.
+                                        <br>
+                                        <span class="location"><i class="fa fa-map-marker"></i> Novi Sad, Serbia</span>
+                                        <span class="seperator">|</span>
+                                        <span><a href="http://www.innovagency.com/" target="_blank"><i class="fa <fa-external-link>"></i>http://www.innovagency.com/</a> </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="section education_section">
+                <div class="container">
+                    <h2 class="h2" data-scroll-watch>Education</h2>
+                    <div class="educations">
+                        <div class="education row">
+                            <div class="col-md-4">
+                                <h4>Faculty of Electronic Engineering</h4>
+                                <p class="experience-period">
+                                    Oktober 2005 – March 2011 </p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Master of Computer Science and Informatics</h3>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        Department: Computer Science
+                                        <br> Primary subject: Math, Programming
+                                        <br>
+                                        <br>The education was mainly Java-based programming, but I also learned about SQL, PHP, MVC, UML and more. During my time in college, I specialized in multimedia. Here I learned about gaming -the importance of OOP-, web- and user experience and design.
+                                        <br>
+                                        <br> Member of
+                                        <img src="../img/hetip-en.jpg" alt="hetip-en" />
+                                        <br>
+                                        <span class="location"><i class="fa fa-map-marker"></i> Nis, Serbia</span>
+                                        <span class="seperator">|</span>
+                                        <span><a href="http://www.elfak.ni.ac.rs/en" target="_blank"><i class="fa <fa-external-link>    </fa-external-link>"></i>http://www.elfak.ni.ac.rs/en</a> </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="education row">
+                            <div class="col-md-4">
+                                <h4>Gimnazija Highschool</h4>
+                                <p class="experience-period">
+                                    September 1998 - Jun 2002 </p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Master of Computer Science and Informatics</h3>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        I graduated highschool, where I enjoyed doing science, math, biology and arts. I realized in my third year of school that I wanted to do something with websites, and so I started making small flash/actionscript applications.
+                                        <br>
+                                        <br>
+                                        <span class="location"><i class="fa fa-map-marker"></i> Zajecar, Serbia </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 

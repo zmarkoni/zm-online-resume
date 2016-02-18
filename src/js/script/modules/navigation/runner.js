@@ -5,8 +5,7 @@ var smoothScroll = require("jquery-smooth-scroll");
 
 var navigationRunner = function() { //ne mogu da stavim ime funkcije!
 
-    applyNavigation();
-    checkHash();
+
     /* NAVIGATION FUNCTIONS */
     //jQuery to collapse the navbar on scroll
     // $(window).scroll(function() {
@@ -17,54 +16,25 @@ var navigationRunner = function() { //ne mogu da stavim ime funkcije!
     //     }
     // });
 
-    function applyNavigation() {
-        applyClickEvent();
-        applyNavigationFixForPhone();
-        applyScrollSpy();
-        applyStickyNavigation();
-    }
-
     // $(window).on('resize', function() {
     //     lnStickyNavigation = $('.scroll_down').offset().top;
     //     console.log('scroll offset: ' + lnStickyNavigation);
     // });
 
-
-
-    function applyClickEvent() {
-        //remove jquery easing plugin
-        // $('.nav_link').bind('click', function(event) {
-        //     var $anchor = $(this);
-        //     $('html, body').stop().animate({
-        //         scrollTop: $($anchor.attr('href')).offset().top
-        //     }, 1500, 'easeInOutExpo');
-        //     event.preventDefault();
-        // });
-        $('.nav_link').smoothScroll({
+    function scrollToSection() {
+        $(this).smoothScroll({
             afterScroll: function() {
-                console.log('we made it!');
+                //console.log('smoothScroll works!');
+                //window.location.hash = $(this).attr('href');
             }
-        });
-
-        $('.nav_link').on('click', function(e) {
-            e.preventDefault();
-
-            if ($($.attr(this, 'href')).length > 0) {
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 400);
-            }
-            return false;
         });
     }
 
-    function applyNavigationFixForPhone() {
-        $('.nav_link').click(function(event) {
-            $('.navbar-collapse').removeClass('in').addClass('collapse');
-        });
+    function mobileNavigation() {
+        $('.navbar-collapse').removeClass('in').addClass('collapse');
     }
 
-    function applyScrollSpy() {
+    function scrollSpy() {
         $("#navbar-example").scrollspy();
         $('#navbar-example').on('activate.bs.scrollspy', function() {
             // debugger;
@@ -72,33 +42,19 @@ var navigationRunner = function() { //ne mogu da stavim ime funkcije!
         });
     }
 
-    function applyStickyNavigation() {
-        lnStickyNavigation = $('.scroll_down').offset().top + 20;
-
-        $(window).on('scroll', function() {
-            stickyNavigation();
-        });
-
-        stickyNavigation();
-    }
-
     function stickyNavigation() {
+        lnStickyNavigation = $('.js_scroll_down').offset().top + 20;
         if ($(window).scrollTop() > lnStickyNavigation) {
-            $('body').addClass('fixed');
+            $('.js_header').addClass('fixed');
         } else {
-            $('body').removeClass('fixed');
+            $('.js_header').removeClass('fixed');
         }
     }
 
-    /* HASH FUNCTION */
-
-    function checkHash() {
-        lstrHash = window.location.hash.replace('#/', '#');
-
-        if ($('a[href=' + lstrHash + ']').length > 0) {
-            $('a[href=' + lstrHash + ']').trigger('click');
-        }
-    }
-
+    // call all FUNCTIONS
+    $('body').on('click', '.js_nav_link',  scrollToSection);
+    //$('body').on('click', '.js_mobile_menu',  mobileNavigation);
+    scrollSpy();
+    $(window).scroll(stickyNavigation);
 }
 module.exports = navigationRunner;

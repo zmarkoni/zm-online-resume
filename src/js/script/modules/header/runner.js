@@ -3,16 +3,6 @@ var skrollr = require('skrollr');
 
 var headerRunner = function() { //ne mogu da stavim ime funkcije!
 
-    fixHeaderHeight();
-
-    $(window).on('scroll', function() {
-        scrollHeader();
-    });
-
-    $(window).on('resize', function() {
-        fixHeaderHeight();
-    });
-
     function fixHeaderHeight() {
         var windowHeight = $(window).height();
         $('.page_header').css({
@@ -34,6 +24,17 @@ var headerRunner = function() { //ne mogu da stavim ime funkcije!
             });
         //}
     }
+
+    // Call all FUNCTIONS
+    fixHeaderHeight();
+
+    $(window).on('scroll', function() {
+        scrollHeader();
+    });
+
+    $(window).on('resize', function() {
+        fixHeaderHeight();
+    });
 
 }
 module.exports = headerRunner;

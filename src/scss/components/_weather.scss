@@ -560,3 +560,38 @@
 	top: -130px;
 	left: 50px;
 }
+
+/*=========================================================================*/
+/*Custom Weather positions*/
+/*=========================================================================*/
+.sunny {
+    right: 16%;
+    top: 16%;
+}
+/* CLOUDY */
+.cloudy_1 {
+    top: 135px;
+    left: 20%;
+}
+.cloudy_2 {
+    top: 135px;
+    left: 30%;
+    background: $grey;
+    box-shadow: $grey 65px -15px 0 -5px, $grey 25px -25px, $grey 30px 10px, $grey 60px 15px 0 -10px, $grey 85px 5px 0 -5px;
+}
+.cloudy_3 {
+    top: 135px;
+    left: 40%;
+}
+.cloudy_4 {
+    top: 135px;
+    left: 30%;
+    background: $grey;
+    box-shadow: $grey 65px -15px 0 -5px, $grey 25px -25px, $grey 30px 10px, $grey 60px 15px 0 -10px, $grey 85px 5px 0 -5px;
+}
+.cloudy_5 {
+    top: 135px;
+    left: 50%;
+    background: $info;
+    box-shadow: $info 65px -15px 0 -5px, $info 25px -25px, $info 30px 10px, $info 60px 15px 0 -10px, $info 85px 5px 0 -5px;
+}
