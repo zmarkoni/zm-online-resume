@@ -1,5 +1,3 @@
-var $ = require('jquery');
-var skrollr = require('skrollr');
 var Events = require('./events/listener.js');
 var HeaderManager = require('./models/header-manager-new.js');
 

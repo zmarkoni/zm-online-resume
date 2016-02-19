@@ -1,3 +1,7 @@
+var $ = require('jquery');
+var skrollr = require('skrollr');
+
+
 var headerManager = function() {};
 
 headerManager.prototype = {
