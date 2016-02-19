@@ -1,40 +1,12 @@
 var $ = require('jquery');
 var skrollr = require('skrollr');
+var Events = require('./events/listener.js');
+var HeaderManager = require('./models/header-manager-new.js');
 
-var headerRunner = function() { //ne mogu da stavim ime funkcije!
+var headerRunner = function() {
 
-    function fixHeaderHeight() {
-        var windowHeight = $(window).height();
-        $('.page_header').css({
-            height: windowHeight
-        });
-        $('.header_bg').css({
-            height: windowHeight
-        });
-    }
+    new HeaderManager().fixHeaderHeight();
+    new Events(); // init LISTENER
 
-    function scrollHeader() {
-        // if (docWidth1 > 640) {
-            var parallax = $('.parallax');
-            var st = $(window).scrollTop(); //documentElement.scrollTop
-            parallax.css({
-                '-webkit-transform': 'translateY(' + -st / 3 + 'px)',
-                '-ms-transform': 'translateY(' + -st / 3 + 'px)',
-                'transform': 'translateY(' + -st / 3 + 'px)'
-            });
-        //}
-    }
-
-    // Call all FUNCTIONS
-    fixHeaderHeight();
-
-    $(window).on('scroll', function() {
-        scrollHeader();
-    });
-
-    $(window).on('resize', function() {
-        fixHeaderHeight();
-    });
-
-}
+};
 module.exports = headerRunner;
