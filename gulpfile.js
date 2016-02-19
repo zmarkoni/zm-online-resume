@@ -13,7 +13,7 @@ var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var imagemin      = require('gulp-imagemin');
 var size          = require('gulp-size');
-
+var cache         = require('gulp-cache');
 
 // ////////////////////////////////////////////////
 // Javascript Browserify, Watchify, Babel, React
@@ -45,11 +45,11 @@ b.on('log', gutil.log); // output build logs to terminal
 function bundle() {
   return b.bundle()
     // log errors if they happen - OVO NE RADI
-    // .on('error', gutil.log.bind(gutil, gutil.colors.red(
-    //    '\n\n*********************************** \n' +
-    //   'BROWSERIFY ERROR:' +
-    //   '\n*********************************** \n\n'
-    //   )))
+    .on('error', gutil.log.bind(gutil, gutil.colors.red(
+       '\n\n*********************************** \n' +
+      'BROWSERIFY ERROR:' +
+      '\n*********************************** \n\n'
+      )))
     //.on('error', handleErrors) Testiraj ovo
     .pipe(source('main.js'))
     // optional, remove if you don't need to buffer file contents
@@ -127,4 +127,8 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['js', 'styles', 'images' ,'browserSync', 'watch']);
+gulp.task('clearCache', function (done) {
+  return cache.clearAll(done);
+});
+
+gulp.task('default', ['js', 'styles', 'images' , 'browserSync', 'watch']);
