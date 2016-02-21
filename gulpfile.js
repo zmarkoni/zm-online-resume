@@ -105,7 +105,7 @@ gulp.task('styles', function() {
 
 
 gulp.task('images', function() {
-  gulp.src('src/img/**/*.{jpg,jpeg,png,gif}') //all styles are included in style.scss
+  gulp.src('src/img/**/*.{jpg,jpeg,png,gif,svg}') //all styles are included in style.scss
     .pipe(imagemin({
       optimizationLevel: 3,
       progessive: true,
@@ -127,7 +127,7 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('clearCache', function (done) {
+gulp.task('clear', function (done) {
   return cache.clearAll(done);
 });
 

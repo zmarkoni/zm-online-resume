@@ -20,13 +20,17 @@
 // ***********************************
 // Custom styles
 // ***********************************
-@import "base/overide_bootstrap";
-@import "components/custom_buttons";
+@import "base/overide-bootstrap";
+@import "components/custom-buttons";
 @import "components/header";
-@import "components/page_header";
-@import "components/animated_text";
-@import "components/mouse";
+@import "components/page-header";
+@import "components/animations/animated-text";
+@import "components/animations/mouse";
 // @import "components/weather";
 @import "components/content";
-@import "components/scroll_watch";
+@import "components/animations/front-end-technologies";
+@import "components/animations/cube";
+
+@import "components/scroll-watch";
+
 @import "components/footer";

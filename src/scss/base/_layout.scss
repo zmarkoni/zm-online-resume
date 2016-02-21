@@ -11,6 +11,9 @@ body{
     background: $body-bg;
 }
 
+.container {
+    padding: 50px 0;
+}
 // .container {
 //     position: relative;
 //     clear: both;
@@ -32,51 +35,6 @@ body{
 //     }
 // }
 
-.col_one {
-
-    width: 100%;
-    margin:0 auto;
-
-    @include breakpoint(greaterthansmall) {
-        width: $container_width;
-    }
-    @include breakpoint(tabletbig) {
-        width: 640px;
-    }
-
-}
-//////////////////////////// col left /////////////////////////////////////////
-@mixin col_left {
-  width:100%;
-  display:none;
-  @include breakpoint(greaterthansmall) {
-      display:block;
-      width:300px;
-      float: left;
-  }
-}
-.left-column,
-.col_left {
-    @include col_left;
-}
-
-//////////////////////////// col mid /////////////////////////////////////////
-@mixin col_mid {
-  width:100%;
-  @include breakpoint(greaterthansmall) {
-      width: 630px;
-      float: right;
-  }
-  @include breakpoint(tabletbig) {
-      width: 60%;
-      float: right;
-  }
-}
-
-.mid-column,
-.col_mid {
-    @include col_mid;
-}
 
 .section {
     position: relative;

@@ -1,5 +1,4 @@
 .animated_logo {
-
     $slack-size: 100px;
     $dot-diameter: 10px;
     $slack-angle: 15deg;
@@ -9,7 +8,6 @@
     $slack-yellow: $warning;
     $slack-pink: $danger;
     $slack-green: $success;
-
     position: absolute;
     display: block;
     width: $slack-size;
@@ -172,5 +170,32 @@
             left: 15%;
             width: 30px;
         }
+    }
+}
+/*=============================================================================*/
+/*================================== Logo Text ================================*/
+/*==============================================================================*/
+.logo_text {
+    float: left;
+    padding-left: 80px;
+    line-height: 58px;
+    .text {
+        font-size: 20px;
+        display: block;
+        float: left;
+        font-weight: bold;
+    }
+    .logo_text1 {
+        color: $danger;
+    }
+    .logo_text2 {
+        color: $warning;
+        letter-spacing: 2px;
+    }
+    .logo_text3 {
+        color: $info;
+    }
+    .logo_text4 {
+        color: $white;
     }
 }
