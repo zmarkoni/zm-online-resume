@@ -16,14 +16,14 @@
     .navbar-nav {
         display: block;
         margin: 0 auto;
-        width: 700px;
+        width: 810px;
         float: none;
     }
     .nav > li {
         position: relative;
         float: left;
         width: auto;
-        background: url('../img/divider.png') left no-repeat;
+        background: url(../img/divider.png) left no-repeat;
         text-align: left;
         transition: background-color 0.1s ease-out;
         &:active,
@@ -42,13 +42,16 @@
             line-height: 55px;
             text-align: center;
             cursor: pointer;
-            transition: background-color 0.2s ease-out;
+            // transition: background-color 0.2s ease-out;
             color: #fff;
+            background: transparent;
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             &:hover,
             &:focus {
-                background-color: #05b9dc;
-                color: #fff;
-
+                // background-color: #05b9dc;
+                color: #05b9dc;
             }
         }
         span {
@@ -80,11 +83,10 @@
 .navbar-header {
     display: none;
 }
-
 .navbar-collapse .last {
     position: absolute;
     top: 0;
-    background: url('../img/divider.png') left no-repeat;
+    background: url(../img/divider.png) left no-repeat;
     right: 0;
     a {
         width: 55px;
