@@ -1,14 +1,22 @@
-//Listener izvrsava ono sto cuje
+
+var navigationManager = require('../models/navigation-manager.js');
 
 var Events = function() {
 
-  myEmitter.on('testEmit', function(test) {
-      // new NotifUserLevelChanged(test);
-    console.log('emit: ' + test);
-  });
+    $('body').on('click', '.js_nav_link', function(event) {
+        new navigationManager().scrollToSection(event);
+    });
 
-  // $("body").on("change", ".js_select_notifications_types", NotificationsList);
+    //call on mobile only add logic
+    $('body').on('click', '.js_mobile_menu', function(event) {
+        new navigationManager().mobileNavigation(event);
+    });
 
-}
+
+    // $(window).scroll(stickyNavigation);
+    // $(window).on('scroll', function() {
+    //     new navigationManager().stickyNavigation();
+    // });
+};
 
 module.exports = Events;

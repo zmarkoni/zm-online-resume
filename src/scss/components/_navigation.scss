@@ -101,3 +101,8 @@
         }
     }
 }
+@include breakpoint(small) {
+    .navbar-header {
+        display: block;
+    }
+}
