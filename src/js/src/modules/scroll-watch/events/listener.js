@@ -1,5 +1,5 @@
 var $ = require('jquery');
-var ScrollWatch = require('scrollwatch');
+//var Extensions = require('./extensions.js');
 
 var Events = function() {
   //debugger;

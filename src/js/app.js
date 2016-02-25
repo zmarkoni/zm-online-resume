@@ -2,16 +2,17 @@
 
 var $ = require('jquery');
 
-//var scrollRunner = require('./script/modules/scroll-watch/runner.js');
-//var testRunner = require('./script/modules/test/runner.js');
-// var testModule = require('./script/modules/module_revealing.js');
-var headerRunner = require('./script/modules/header/runner.js');
-var navigationRunner = require('./script/modules/navigation/runner.js');
+
+//var testRunner = require('./src/modules/test/runner.js');
+// var testModule = require('./src/modules/module_revealing.js');
+var headerRunner = require('./src/modules/header/runner.js');
+var navigationRunner = require('./src/modules/navigation/runner.js');
+var scrollRunner = require('./src/modules/scroll-watch/runner.js');
 
 var Application = function() {
 
-    //testRunner();
-    //scrollRunner();
+    //new testRunner();
+    new scrollRunner();
     new headerRunner();
     new navigationRunner();
 };

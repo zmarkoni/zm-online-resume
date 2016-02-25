@@ -11,12 +11,22 @@ navigationManager.prototype = {
     },
 
     scrollToSection: function(event) {
+        event.preventDefault();
+        var targetEl = $(event.currentTarget);
         var target = $(event.currentTarget.hash);
+
+         //update navigation active links
+        $('.js_nav_link').parent().removeClass('active');
+        $(targetEl).parent().addClass('active');
+
+        //Scroll to tatget section
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html, body').animate({
             scrollTop: target.offset().top
           }, 1000);
+
+
           console.log('scrollToSection works!');
           return false;
         }
