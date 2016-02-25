@@ -1,3 +1,4 @@
+// Module revealing patern
 var headerManager = function() {
 
     function fixHeaderHeight() {

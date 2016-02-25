@@ -1,7 +1,7 @@
 var $ = require('jquery');
 var skrollr = require('skrollr');
 
-
+//Prototype pattern
 var headerManager = function() {};
 
 headerManager.prototype = {
