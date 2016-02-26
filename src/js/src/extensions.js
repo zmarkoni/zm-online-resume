@@ -3,7 +3,7 @@ var ScrollWatch = require('scrollwatch');
 
 var Extensions = {
 
-    watchForScroll: function(options) {
+    localScrollWatch: function(options) {
         return ScrollWatch(options);
     }
 };

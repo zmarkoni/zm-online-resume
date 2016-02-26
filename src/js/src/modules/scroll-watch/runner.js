@@ -1,18 +1,20 @@
 // var Events = require('./events/listener.js');
-var scrollWatchManager = require('./models/scrollWatch-manager');
+// var ScrollWatchManager = require('./models/scrollWatch-manager');
 var Extensions = require('../../extensions.js');
 
-var scrollRunner = function() { //ne mogu da stavim ime funkcije!
+var ScrollRunner = function() { //ne mogu da stavim ime funkcije!
+    // console.log('Runner');
     // new Events();
 
-    new Extensions.watchForScroll({
+    // new ScrollWatchManager().WatchScroll;
+    Extensions.localScrollWatch({
         watchOnce: false, //always watch element
-        onElementInView: function() {
-            scrollWatchManager.addClass;
+        onElementInView: function(data) {
+            $(data.el).addClass('active'); //THIS CAN BE ADDED BY DEFAULT
+            console.log('onElementInView');
         }
     });
 
-    console.log('Runner');
-}
+};
 
-module.exports = scrollRunner;
+module.exports = ScrollRunner;
