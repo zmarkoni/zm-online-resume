@@ -39,24 +39,19 @@ $line-height-mobile: 1.625;
 
 
 // COLORS
-
-$color1:     #000;
-$color2:     #545454;
-$color3:     #1496bb;
-
-$body-text:  $color2;
-
 $success:    #3eb991; // green
 $info:       #0966DA; // blue
 $warning:    #f7931c; // orange
 $danger:     #e01563; // red
 
-$white: #fff;
-$black: #000;
 
-// COLORS: Links
-$link_color: $color1;
-$link_hover: darken( $color1, 20% );
+$color1:     #fff;
+$color2:     #000;
+$color3:     #545454;
+$color4:     #1496bb;
+$color5:     #ccc;
+
+$body-text:  $color2;
 
 // COLORS: Buttons
 $button1-color: $color3;
@@ -71,11 +66,10 @@ $button2-color-disabled: $button2-color;
 // BACKGROUNDS
 
 
-$bg1: $white;
+$bg1: #fff;
 $bg2: #333745;
-$bg3: #373745;
-$bg4: #2a2e3a;
-$bg5: #082b3b;
+$bg3: #000;
+$bg4: #1A1A1A;
 
 $body-bg: $bg1;
 $bg_fixed_pattern : url("http://www.digitalatelier.ro/css/../images/dot.png") fixed;

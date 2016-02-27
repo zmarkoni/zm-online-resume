@@ -1,17 +1,8 @@
 // ***********************************
 // Custom styles
 // ***********************************
-.vertical_line {
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 30%;
-        height: 100%;
-        width: 4px;
-        margin-left: -2px;
-        background: #d7e4ed;
-    }
+.section_subtitle_description {
+    text-align: center;
 }
 .profile_section {
     .profile_description {
@@ -33,9 +24,24 @@
 .education_section {
     // @extend .vertical_line;
 }
-.skills_section {
+.skills_section {}
+.favorites_section {
+
+    .container {
+        padding-bottom: 0;
+        margin-bottom: 50px;
+    }
     .section_subtitle_description {
         text-align: center;
     }
+    a {
+        color: $color1;
+        &:hover {
+            color: $color1;
+        }
+    }
+}
 
+.contact_section {
+    background-color: $bg4;
 }

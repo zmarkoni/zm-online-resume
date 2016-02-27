@@ -4,11 +4,11 @@
 
 a, a:visited {
 	text-decoration:none;
-	color:$link_color;
+	color:$color4;
 	@include transition-all(.5s);
 }
 a:hover, a:active, a:focus {
-	color:$link_hover;
+	opacity: 0.5;
 	@include transition-all(.5s);
 }
 
@@ -20,7 +20,7 @@ a:hover, a:active, a:focus {
 h1,h2,h3,h4,h5,h6 {
 	font-family: $font-family-primary;
 	font-weight: $font-weight-title;
-    color: $color3;
+    color: $color4;
 }
 
 h1, .h1 {

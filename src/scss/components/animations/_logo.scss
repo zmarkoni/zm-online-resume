@@ -177,7 +177,8 @@
 /*==============================================================================*/
 .logo_text {
     float: left;
-    padding-left: 80px;
+    margin-left: 80px;
+    margin-right: 50px;
     line-height: 58px;
     .text {
         font-size: 20px;
@@ -186,16 +187,16 @@
         font-weight: bold;
     }
     .logo_text1 {
-        color: $danger;
+        color: $color1;
     }
     .logo_text2 {
-        color: $warning;
+        color: $color1;
         letter-spacing: 2px;
     }
     .logo_text3 {
-        color: $info;
+        color: $color1;
     }
     .logo_text4 {
-        color: $white;
+        color: $color5;
     }
 }
