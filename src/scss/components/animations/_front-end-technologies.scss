@@ -28,7 +28,6 @@
             position: absolute;
             max-width: 100px;
             max-height: 100px;
-            background: white;
         }
     }
     /* END Container styles */
@@ -165,49 +164,3 @@
     }
     /* END Keyframes for the initial animation */
 }
-.front_end_skills {
-    .col-md-4 {
-        padding: 0 50px;
-    }
-    .middle_border {
-        min-height: 380px;
-        border-right: 1px solid $hr_color;
-        border-left: 1px solid $hr_color;
-    }
-    .section_title {
-        text-align: left;
-        .fa {
-            margin-right: 10px;
-        }
-    }
-    ul {
-        padding-top: 10px;
-    }
-    ul > li {
-        min-height: 30px;
-        padding: 3px 0;
-    }
-    .ability-title {
-        display: inline-block;
-        width: 60%;
-        font-size: 15px;
-    }
-    .ability-score {
-        float: right;
-    }
-    .ability-score .fa-star {
-        color: #DFE0E0;
-        font-size: 14px;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-    .ability-score .fa-star.filled {
-        color: $color3;
-    }
-    .ability-score .fa-star {
-        margin-left: 2px;
-    }
-}
-.front_end_tools {}

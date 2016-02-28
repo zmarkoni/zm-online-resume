@@ -9,6 +9,7 @@ body{
 	font-family: $font-family-primary;
     color: $body-text;
     background: $body-bg;
+
 }
 
 .container {
@@ -38,4 +39,5 @@ body{
 
 .section {
     position: relative;
+    clear: both;
 }

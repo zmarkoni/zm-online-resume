@@ -3,14 +3,14 @@
 // ***********************************
 
 h1,h2,h3,h4 {
-    opacity: 0.2;
+    // opacity: 0.2;
   &.active {
 
   }
   &.scroll-watch-in-view {
 
         color:red;
-        opacity: 1;
+        // opacity: 1;
         transition: all 1s ease;
         transition-delay: 1s;
   }

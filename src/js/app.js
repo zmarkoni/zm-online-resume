@@ -15,9 +15,10 @@ var Application = function() {
     new ScrollRunner();
     new HeaderRunner();
     new NavigationRunner();
+
 };
 
 
 $(function() {
-  new Application();
+    new Application();
 });
