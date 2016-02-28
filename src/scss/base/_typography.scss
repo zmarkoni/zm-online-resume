@@ -1,26 +1,23 @@
-// ***********************************
-// LINKS
-// ***********************************
 
-a, a:visited {
-	text-decoration:none;
-	color:$color4;
-	@include transition-all(.5s);
-}
-a:hover, a:active, a:focus {
-	opacity: 0.5;
-	@include transition-all(.5s);
-}
+
 
 
 // ***********************************
 // TYPOGRAPHY
 // ***********************************
+body{
+	font-family: $font-family-primary;
+    color: $color3;
+    background: $bg1;
+
+}
+
 .h1,.h2,.h3,.h4,.h5,.h6
 h1,h2,h3,h4,h5,h6 {
 	font-family: $font-family-primary;
 	font-weight: $font-weight-title;
     color: $color4;
+    text-transform: uppercase;
 }
 
 h1, .h1 {
@@ -35,7 +32,21 @@ h3, .h3 {
     font-size: 28px;
 }
 
+a, a:visited {
+	text-decoration:none;
+	color:$color4;
+	@include transition-all(.5s);
+}
+a:hover, a:active, a:focus {
+	opacity: 0.5;
+	@include transition-all(.5s);
+}
+
 .section_title,
 .section_subtitle {
     text-align: center;
+}
+
+.colored {
+    color: $color4;
 }
