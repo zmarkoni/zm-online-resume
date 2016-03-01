@@ -284,6 +284,7 @@
     .front_end_tools {}
 }
 .projects_section {
+    padding-bottom: 100px;
     background-image: url(/img/bg/bg-silver-pattern.jpg);
     background-repeat: repeat;
     background-position: center center;
@@ -319,6 +320,7 @@
     figure img {
         width: 110%;
         max-width: 110%;
+        height: 450px;
     }
     figure figcaption {
         padding: 20px 30px;
@@ -357,7 +359,7 @@
     /***** EFFECT *****/
     /*---------------*/
     figure.effect {
-        background: #22A39F;
+        background: rgba(0, 0, 0, 0.9);
         color: #FFF;
     }
     figure.effect img {
@@ -430,7 +432,13 @@
     color: $color2;
     z-index: 0;
     .h2 {
-        color: $color2;
+        position: relative;
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 50px;
+        color: $color1;
+        z-index: 2;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
     }
     .map_overlay {
         position: absolute;
@@ -438,20 +446,21 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.8);
         z-index: 1;
     }
     .contact_info {
         position: relative;
-        // margin-top: 100px;
-        width: 700px;
-        padding: 30px;
+        width: 300px;
+        margin-left: 200px;
+        float: left;
         color: $color1;
-        background-color: rgba(0,0,0,0.6);
         z-index: 2;
         .contact_link {
-            text-align: center;
-            margin-top: 10px;
+            text-align: left;
+            margin: auto;
+            display: inline-block;
+            vertical-align: middle;
         }
         a {
             color: $color1;
@@ -471,21 +480,24 @@
     }
 }
 .scope__definition {
-    display: inline-block;
+    display: block;
     position: relative;
-    width: 210px;
-    padding: 20px;
-    vertical-align: top;
+    clear: both;
+    width: 300px;
+    padding: 0;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    vertical-align: middle;
 }
 .scope__definition:hover .scope__circle-over {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0) inset,0 0 0 62px rgba(255, 255, 255, 0) inset,0 0 0 62px rgba(255, 255, 255, 0) inset;
+    color: $colored;
 }
 .scope__definition:hover .scope__circle-viko:before {
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 }
-.scope__definition:hover .svg-fill {
+.scope__definition:hover .fa {
     fill: #313131;
 }
 .scope__definition:hover .scope__title {
@@ -494,11 +506,15 @@
 .scope__definition:hover .scope__title:after {
     height: 40px;
 }
+$circle_size: 80px;
 .scope__circle-viko {
     position: relative;
     margin: 0 auto;
-    height: 124px;
-    width: 124px;
+    height: $circle_size;
+    width: $circle_size;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
 }
 .scope__circle-viko:before {
     position: absolute;
@@ -508,9 +524,10 @@
     height: 26px;
     width: 26px;
     margin: 0 auto;
-    height: 124px;
-    width: 124px;
+    height: $circle_size;
+    width: $circle_size;
     background: url(/img/bg/scope-radial.png) no-repeat center center;
+    background-size: 100%;
     z-index: 1;
 }
 .scope__circle-over {
@@ -519,8 +536,8 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
-    height: 124px;
-    width: 124px;
+    height: $circle_size;
+    width: $circle_size;
     border-radius: 112px;
     -webkit-box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
     box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
@@ -529,14 +546,69 @@
     z-index: 2;
 }
 .scope__icon {
-    padding: 30px;
+    padding: 25px;
+    .fa {
+        display: block;
+        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
 }
-.fa {
-    display: block;
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    font-size: 64px;
-    text-align: center;
-    cursor: pointer;
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.email_modal_container {
+    position: relative;
+    float: right;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    z-index: 2;
+    .modal-header {
+        padding: 0 15px;
+        border-bottom: none;
+    }
+    .modal-title {
+        color: $color1;
+        text-transform: initial;
+    }
+    .form-control {
+        background-color: rgba(0,0,0,0.6);
+        border-color: transparent;
+        color: $color1;
+    }
+    .button_email {
+        float: right;
+        padding: 10px 15px;
+        color: $color1;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include border-radius(10px);
+        background-color: $bg3;
+        @include transition(0.5s);
+        &:hover {
+            background-color: rgba(0,0,0,0.6);
+        }
+        .fa {
+            margin-left: 5px;
+        }
+    }
 }
