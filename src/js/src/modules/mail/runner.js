@@ -3,7 +3,9 @@
 var MailManager = require('./models/mail-manager.js');
 
 var MailRunner = function() {
-    new MailManager(); //call on init
+
+    new MailManager();
+
     // new Events(); // init LISTENER
 };
 

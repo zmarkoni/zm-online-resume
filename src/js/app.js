@@ -7,7 +7,7 @@ var $ = require('jquery');
 var ScrollRunner = require('./src/modules/scroll-watch/runner.js');
 var HeaderRunner = require('./src/modules/header/runner.js');
 var NavigationRunner = require('./src/modules/navigation/runner.js');
-var MailRunner = require('./src/modules/mail/runner.js');
+//var MailRunner = require('./src/modules/mail/runner.js');
 
 var Application = function() {
 
