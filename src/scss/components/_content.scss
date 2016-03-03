@@ -281,7 +281,11 @@
             margin-left: 2px;
         }
     }
-    .front_end_tools {}
+    .page_speed {}
+
+    .github_project {
+
+    }
 }
 .projects_section {
     padding-bottom: 100px;
@@ -610,5 +614,10 @@ $circle_size: 80px;
         .fa {
             margin-left: 5px;
         }
+    }
+    .message_success {
+        float: left;
+        color: $color1;
+        margin-top: 10px;
     }
 }
