@@ -1,11 +1,12 @@
-// var Events = require('./events/listener.js');
+var CubeEvents = require('./events/cube-listener.js');
 // var ScrollWatchManager = require('./models/scrollWatch-manager');
 var Extensions = require('../../extensions.js');
 
 var ScrollRunner = function() { //ne mogu da stavim ime funkcije!
+
     // console.log('Runner');
     // new Events();
-
+    // new CubeEvents();
     // new ScrollWatchManager().WatchScroll;
     Extensions.localScrollWatch({
         watchOnce: false, //always watch element
