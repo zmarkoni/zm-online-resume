@@ -16,3 +16,9 @@ h1,h2,h3,h4 {
   }
 }
 
+.section_title.scroll-watch-in-view {
+    .section_line {
+        width: 100%;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}

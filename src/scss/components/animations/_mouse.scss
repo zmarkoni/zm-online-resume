@@ -22,8 +22,8 @@
     -webkit-transform: rotate(45deg);
     /* Chrome, Safari, Opera */
     transform: rotate(45deg);
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    border-right: 2px solid $colored;
+    border-bottom: 2px solid $colored;
     margin: 5px 0 3px 6px;
 }
 .unu {
@@ -55,7 +55,7 @@
     width: 22px;
     border-radius: 10px;
     transform: none;
-    border: 2px solid white;
+    border: 2px solid $colored;
     top: 170px;
 }
 .wheel {
@@ -63,7 +63,7 @@
     width: 2px;
     display: block;
     margin: 7px auto;
-    background: white;
+    background: $color1;
     position: relative;
 }
 .wheel {

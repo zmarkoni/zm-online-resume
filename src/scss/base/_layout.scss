@@ -6,7 +6,7 @@ $container_width        : 960px;
 $container_max_width    : 1024px;
 
 .container {
-    padding: 50px 0;
+    //padding: 50px 0;
 }
 // .container {
 //     position: relative;
@@ -33,4 +33,5 @@ $container_max_width    : 1024px;
 .section {
     position: relative;
     clear: both;
+    padding: 100px;
 }
