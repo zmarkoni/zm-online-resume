@@ -1,37 +1,47 @@
 // ***********************************
 // LAYOUT
 // ***********************************
-
-$container_width        : 960px;
-$container_max_width    : 1024px;
-
-.container {
-    //padding: 50px 0;
-}
-// .container {
-//     position: relative;
-//     clear: both;
-//     margin-right: auto;
-//     margin-left: auto;
-//     padding-left:  0;
-//     padding-right: 0;
-//     width: 100%;
-//
-//
-//     @include breakpoint(greaterthansmall) {
-//         width: $container_width;
-//     }
-//
-//     @include breakpoint(tabletbig) {
-//         width: 800px;
-//         padding-left:  20px;
-//         padding-right: 20px;
-//     }
-// }
-
-
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 .section {
     position: relative;
     clear: both;
-    padding: 100px;
+    padding: 100px 0;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+@media (max-width: 1199px) {
+    .about_section {
+        .button {
+            width: 210px;
+            .fa-chevron-right {
+                display: none;
+            }
+        }
+        .button_linkedin {
+            margin-right: 20px;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .profile_img_wrap {
+        margin: 0 auto 20px;
+    }
+    .about_section {
+        .about_me_text {
+            text-align: justify;
+        }
+        h4 {
+            text-align: center;
+        }
+        .button {
+            margin: 0 auto;
+            float: none;
+            margin-bottom: 20px;
+        }
+    }
 }

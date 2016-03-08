@@ -48,8 +48,9 @@
         padding-right: 80px;
     }
     .profile_img_wrap {
-        width: 250px;
-        height: 250px;
+        width:100%;
+        max-width: 250px;
+        max-height: 250px;
         // border: 10px solid $colored;
         // @include border-radius(50%);
         overflow: hidden;
