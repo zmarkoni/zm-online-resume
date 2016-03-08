@@ -176,10 +176,13 @@
 /*================================== Logo Text ================================*/
 /*==============================================================================*/
 .logo_text {
-    float: left;
-    margin-left: 80px;
-    margin-right: 50px;
+    position: absolute;
+    width: 90px;
+    top: 0;
+    left: 80px;
     line-height: 58px;
+    z-index: 200;
+
     .text {
         font-size: 20px;
         display: block;

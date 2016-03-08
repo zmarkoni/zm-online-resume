@@ -14,35 +14,36 @@
 
 <body id="app" data-spy="scroll" data-target="#navbar-example">
     <header class="js_header header">
-        <nav class="navbar navbar-default" id="navbar-example" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <nav class="navbar" role="navigation">
+            <input type="checkbox" id="navbar-toggle-cbox">
             <div class="navbar-header">
-                <button type="button" class="js_mobile_menu navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </label>
+                <a class="navbar-brand" href="#">
+                    <div class="animated_logo first">
+                        <span class="logo_dot dot_1"></span>
+                        <span class="logo_dot dot_2"></span>
+                        <span class="logo_dot dot_3"></span>
+                        <span class="logo_dot dot_4"></span>
+                        <span class="logo_dot dot_5"></span>
+                        <span class="logo_dot dot_6"></span>
+                        <span class="logo_dot dot_7"></span>
+                        <span class="logo_dot dot_8"></span>
+                    </div>
+                    <div class="logo_text">
+                        <span class="text logo_text1">Z</span>
+                        <span class="text logo_text2">M</span>
+                        <span class="text logo_text3">O</span>
+                        <span class="text logo_text4">nline</span>
+                    </div>
+                </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
-                <div class="animated_logo first">
-                    <span class="logo_dot dot_1"></span>
-                    <span class="logo_dot dot_2"></span>
-                    <span class="logo_dot dot_3"></span>
-                    <span class="logo_dot dot_4"></span>
-                    <span class="logo_dot dot_5"></span>
-                    <span class="logo_dot dot_6"></span>
-                    <span class="logo_dot dot_7"></span>
-                    <span class="logo_dot dot_8"></span>
-                </div>
-                <div class="logo_text">
-                    <span class="text logo_text1">Z</span>
-                    <span class="text logo_text2">M</span>
-                    <span class="text logo_text3">O</span>
-                    <span class="text logo_text4">nline</span>
-                </div>
+            <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a class="js_nav_link nav_link" href="#app"><i class="fa fa-home"></i>Home</a>
                         <span></span>
@@ -68,20 +69,14 @@
                     <a href="https://rs.linkedin.com/in/zoranzokimarkovic" target="_blank"><i class="fa fa-linkedin"></i></a>
                 </div>
             </div>
-            <!-- /.navbar-collapse -->
         </nav>
+
     </header>
 
     <main class="main">
         <div class="page_header">
             <div class="parallax">
                 <div class="header_bg">
-                    <!-- <div class="sunny"></div>
-                    <div class="cloudy cloudy_1"></div>
-                    <div class="cloudy cloudy_2"></div>
-                    <div class="cloudy cloudy_3"></div>
-                    <div class="cloudy cloudy_4"></div>
-                    <div class="cloudy cloudy_5"></div> -->
 
                     <div class="text_logo">
                         <h1 class="text my_name">Zoran Marković</h1>
@@ -90,12 +85,6 @@
                         </p>
                     </div>
 
-                    <!-- <div class="animated_text">
-                        <p class="text my_name">Zoran Marković</p>
-                        <p class="text resume_text">Interactive resume
-                            <span>|</span>
-                        </p>
-                    </div> -->
                     <a href="#about" class="mouse_scroll_down js_scroll_down">
                         <div id="mouse">
                             <div class="mouse">
@@ -174,8 +163,8 @@
                                         <div class="timeline-label">
                                             <h3 class="panel-title">Front-End Developer</h3>
                                             <div class="timeline-description">
-                                                As a senior at Codeplicity, I work on a custom platform which is capable of running thousands of applications from a single engine. Good planning and organizing the code is essence in order to support multiple projects from the same platform. I work
-                                                in a front end team where we love to write nice, readable and reusable code.
+                                                As a senior at Codeplicity, I work on a custom platform which is capable of running thousands of applications from a single engine. Good planning and organizing the code is essence in order to support multiple projects from the same platform. I work in
+                                                a front end team where we love to write nice, readable and reusable code.
                                                 <p>
                                                     <span class="location"><i class="fa fa-map-marker"></i> Novi Sad, Serbia</span>
                                                     <span class="seperator">|</span>
