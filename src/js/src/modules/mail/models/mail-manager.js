@@ -34,7 +34,7 @@ var MailManager = function() {
 
     function handleAuthResult(authResult) {
         if (authResult && !authResult.error) {
-            console.log('authentitication sucess');
+            //console.log('authentitication sucess');
             loadGmailApi();
             // $('#authorize-button').remove();
             // $('.table-inbox').removeClass("hidden");

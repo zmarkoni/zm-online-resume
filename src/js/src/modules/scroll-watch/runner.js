@@ -12,7 +12,7 @@ var ScrollRunner = function() { //ne mogu da stavim ime funkcije!
         watchOnce: false, //always watch element
         onElementInView: function(data) {
             $(data.el).addClass('active'); //THIS CAN BE ADDED BY DEFAULT
-            console.log('onElementInView');
+            //console.log('onElementInView');
         }
     });
 

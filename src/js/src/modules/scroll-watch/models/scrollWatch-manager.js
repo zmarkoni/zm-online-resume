@@ -4,7 +4,7 @@ var $ = require('jquery');
 var ScrollWatchManager = function() {
 
     var addClass = function(data) {
-        console.log(data.el.innerText);
+        //console.log(data.el.innerText);
         // console.log($(data.el));
         $(data.el).addClass('active'); //THIS CAN BE ADDED BY DEFAULT
     };
@@ -22,7 +22,7 @@ var ScrollWatchManager = function() {
             watchOnce: false, //always watch element
             onElementInView: function() {
                 $(data.el).addClass('active'); //THIS CAN BE ADDED BY DEFAULT
-                console.log('onElementInView');
+                //console.log('onElementInView');
             }
         });
     };
