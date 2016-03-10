@@ -1,0 +1,42 @@
+// ***********************************
+// Custom styles
+// ***********************************
+.section_subtitle_description {
+    text-align: center;
+}
+.section_title {
+    margin-bottom: 100px;
+    .section_icon {
+        display: block;
+        margin-top: -50px;
+        font-size: 50px;
+        line-height: 50px;
+        color: $colored;
+    }
+    .h2 {
+        position: relative;
+        display: inline-block;
+        margin-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background: $bg1;
+        width: auto;
+        z-index: 2;
+    }
+    .section_line {
+        position: absolute;
+        top: 138px;
+        left: 0;
+        right: 0;
+        width: 1%;
+        z-index: 1;
+        margin: 0 auto;
+        border: 2px solid $border2;
+    }
+    .lead {
+        margin-top: 20px;
+    }
+}
+.section_subtitle {
+    margin-bottom: 100px;
+}

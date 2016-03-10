@@ -1,0 +1,149 @@
+.skills_section {
+    background-image: url(/img/bg/bg-silver-pattern.jpg);
+    background-repeat: repeat;
+    background-position: center center;
+    .container {
+        background-image: url(/img/bg/bg-light-pattern.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .h2 {
+        @include gradient(#E7E7E7, #EBEBEB);
+    }
+    .front_end_skills {
+        .col-md-4 {
+            width: 30%;
+            margin: 0 1.5%;
+            padding: 0;
+            height: 450px;
+            background: $bg1;
+            border-bottom: 2px solid $bg2;
+            @include transition(0.7s);
+            &:hover {
+                background: rgba(255,255,255,0.7);
+            }
+        }
+        // .middle_border {
+        //     min-height: 380px;
+        //     border-right: 1px solid $hr_color;
+        //     border-left: 1px solid $hr_color;
+        // }
+        .section_title {
+            margin: 0;
+            padding: 20px 15px;
+            background: $bg2;
+            color: $color1;
+            font-size: 20px;
+            text-align: left;
+            .fa {
+                margin-right: 10px;
+            }
+        }
+        ul {
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        ul > li {
+            min-height: 30px;
+            padding: 3px 0;
+        }
+        .ability-title {
+            display: inline-block;
+            width: 60%;
+            font-size: 15px;
+        }
+        .ability-score {
+            float: right;
+        }
+        .ability-score .fa-star {
+            color: #DFE0E0;
+            font-size: 14px;
+        }
+        .ability-score .fa-star.filled {
+            @include transition(0.5s);
+            color: $color4;
+            cursor: pointer;
+            &:hover {
+                color: red;
+                font-size: 16px;
+            }
+        }
+        .ability-score .fa-star {
+            margin-left: 2px;
+        }
+    }
+    .page_speed {
+        margin-top: 50px;
+        .favorite_links {
+            margin-top: 50px;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+            li {
+                display: inline-block;
+                margin: 0 30px;
+                min-height: initial;
+                padding: 0;
+            }
+        }
+        .animated_link_wrap a {
+            height: 40px;
+            line-height: 40px;
+            -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+            perspective: 800px;
+        }
+        .animated_link_wrap a span {
+            position: relative;
+            display: inline-block;
+            min-width: 200px;
+            padding: 0;
+            color: white;
+            background: $bg2;
+            box-shadow: inset 0 3px #75241A;
+            -webkit-transition: background 0.6s;
+            -moz-transition: background 0.6s;
+            transition: background 0.6s;
+            -webkit-transform-origin: 50% 0;
+            -moz-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform-origin: 0 50%;
+            -moz-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+        }
+        .animated_link_wrap a span::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 96%;
+            background: $bg1;
+            color: $color3;
+            content: attr(data-hover);
+            -webkit-transform: rotateX(270deg);
+            -moz-transform: rotateX(270deg);
+            transform: rotateX(270deg);
+            -webkit-transition: -webkit-transform 0.6s;
+            -moz-transition: -moz-transform 0.6s;
+            transition: transform 0.6s;
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            transform-origin: 0 0;
+            pointer-events: none;
+        }
+        .animated_link_wrap a:hover,
+        .animated_link_wrap a:focus {
+            opacity: 1;
+        }
+        .animated_link_wrap a:hover span::before,
+        .animated_link_wrap a:focus span::before {
+            -webkit-transform: rotateX(10deg);
+            -moz-transform: rotateX(10deg);
+            transform: rotateX(10deg);
+        }
+    }
+}

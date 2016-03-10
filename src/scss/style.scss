@@ -22,16 +22,24 @@
 // ***********************************
 @import "base/overide-bootstrap";
 @import "components/custom-buttons";
-@import "components/header";
-@import "components/page-header";
-@import "components/animations/animated-text";
-@import "components/animations/mouse";
-// @import "components/weather";
-@import "components/content";
-@import "components/animations/front-end-technologies";
-// @import "components/animations/cube";
 
 @import "base/layout";
+
+@import "components/header";
+@import "components/global-styles";
+@import "components/hp-sections/page-header";
+@import "components/animations/animated-text";
+@import "components/animations/mouse";
+
+@import "components/hp-sections/about-section";
+@import "components/hp-sections/experiance-section";
+@import "components/hp-sections/skills-section";
+@import "components/animations/front-end-technologies";
+@import "components/hp-sections/projects-section";
+@import "components/hp-sections/contact-section";
+
+
+
 
 @import "components/scroll-watch";
 
