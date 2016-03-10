@@ -32,9 +32,6 @@
     }
     .contact_info {
         position: relative;
-        width: 300px;
-        margin-left: 200px;
-        float: left;
         color: $color1;
         z-index: 2;
         .contact_link {
@@ -59,10 +56,23 @@
         text-align: center;
         z-index: 2;
     }
+    @include breakpoint(medium) {
+        .container {
+            width: 100%;
+        }
+    }
+    @include breakpoint(small) {
+        &.contact_section {
+            padding-top: 15px;
+            height: initial;
+            background:$bg4;
+        }
+        .map_overlay {
+            display: none;
+        }
+    }
 }
-
 /*=============== email form ==============================*/
-
 .scope__definition {
     display: block;
     position: relative;
@@ -159,9 +169,7 @@ $circle_size: 80px;
 }
 .email_modal_container {
     position: relative;
-    float: right;
-    width: 400px;
-    height: 400px;
+    min-height: 400px;
     background-color: transparent;
     z-index: 2;
     .modal-header {
