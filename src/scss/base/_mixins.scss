@@ -1,53 +1,47 @@
 // ***********************************
 // MIXINS
 // ***********************************
+// $mobile: 768px;
+// $tablet: 992px;
+// $desktop: 1200px;
 // Layput media queries
 @mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (min-width: #{$desktop}) {
-      @content;
+    @if $point == big {
+        @media (max-width: $desktop) {
+            @content;
+        }
     }
-  }
-  @else if $point == tablet {
-    @media (min-width: #{$mobile}) and (max-width: #{$desktop}) {
-      @content;
+    @else if $point == medium {
+        @media (max-width: $tablet) {
+            @content;
+        }
     }
-  }
-  @else if $point == mobile {
-    @media (max-width: #{$mobile}) {
-      @content;
+    @else if $point == small {
+        @media (max-width: $mobile) {
+            @content;
+        }
     }
-  }
-  @else if $point == greater-than-mobile {
-    @media (min-width: #{$mobile}) {
-      @content;
+    @else if $point == greater-than-small {
+        @media (min-width: $mobile) {
+            @content;
+        }
     }
-  }
-  @else if $point == greater-than-tablet {
-    @media (min-width: #{$tablet}) {
-      @content;
+    @else if $point == greater-than-tablet {
+        @media (min-width: $tablet) {
+            @content;
+        }
     }
-  }
-  @else if $point == greater-than-tablet {
-    @media (min-width: #{$desktop}) {
-      @content;
+    @else if $point == greater-than-medium {
+        @media (min-width: $desktop) {
+            @content;
+        }
     }
-  }
-  @else if $point == between-tablet-small {
-    @media (min-width: #{$mobile}) and (max-width: #{$desktop}) {
-      @content;
+    @else if $point == between-small-big {
+        @media (min-width: $mobile) and (max-width: $desktop) {
+            @content;
+        }
     }
-  }
-  @else if $point == tablet-small {
-    @media (min-width: #{$tablet}) and (max-width: #{$desktop}-1) {
-      @content;
-    }
-  }
-  @else if $point == tablet-big {
-    @media (min-width: #{$mobile}) and (max-width: #{$tablet}-1) {
-      @content;
-    }
-  }
+
 }
 @mixin inmiddle($el, $width, $html, $fluid:100%) {
   $margin: calc( ((#{$fluid} - (#{$el} * #{$width})) / (#{$el} )) / 2 );
