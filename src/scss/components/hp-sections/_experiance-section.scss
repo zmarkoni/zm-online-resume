@@ -144,4 +144,48 @@
             }
         }
     }
+    @include breakpoint(small) {
+        .timeline-time {
+            position: relative;
+            left: auto;
+            width: 100%;
+            text-align: left;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .timeline-centered:before {
+            left: 7%;
+        }
+        .timeline-entry {
+            width: 98%;
+            float: right;
+            margin-bottom: 20px;
+        }
+
+        .timeline-label {
+            margin-left: 50px;
+            &:after {
+                display: none;
+            }
+        }
+        .timeline-time {
+            position: relative;
+            left: auto;
+            width: 90%;
+            margin-left: 15%;
+            text-align: left;
+            padding: 0 0 0 10px;
+        }
+        h4 {
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .timeline-icon {
+            margin-top: -55px;
+        }
+        .timeline-label {
+            padding: 10px 20px 20px;
+            margin-left: 50px;
+        }
+    }
 }

@@ -6,7 +6,7 @@
         padding-right: 80px;
     }
     .profile_img_wrap {
-        width:100%;
+        width: 100%;
         max-width: 250px;
         max-height: 250px;
         // border: 10px solid $colored;
@@ -56,4 +56,53 @@
         margin-right: 50px;
     }
     .button_download_resume {}
+    @media (max-width: 1199px) {
+        //@include breakpoint(sma) {
+        .about_section {
+            .button {
+                width: 210px;
+                .fa-chevron-right {
+                    display: none;
+                }
+            }
+            .button_linkedin {
+                margin-right: 20px;
+            }
+        }
+    }
+    @include breakpoint(medium) {
+        .profile_img_wrap {
+            margin: 0 auto 20px;
+        }
+        .about_section {
+            .about_me_text {
+                text-align: justify;
+            }
+            h4 {
+                text-align: center;
+            }
+            .button {
+                margin: 0 auto;
+                float: none;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @include breakpoint(small) {
+        .profile_img_wrap {
+            max-width: 150px;
+            max-height: 150px;
+        }
+        .profile_name,
+        .profile_proffesion {
+            text-align: center;
+        }
+        .about_me_text {
+            text-align: justify;
+        }
+        .button {
+            margin: 0 auto 20px;
+            float: none;
+        }
+    }
 }

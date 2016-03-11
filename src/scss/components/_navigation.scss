@@ -11,7 +11,7 @@
     #navbar-toggle-cbox:checked ~ .collapse {
         display: block;
     }
-    @include breakpoint(greater-than-mobile) {
+    @include breakpoint(greater-than-small) {
         width: 100%;
         height: 100%;
         .navbar-nav {
@@ -103,7 +103,7 @@
         }
     }
     /*END greaterthansmall*/
-    @include breakpoint(mobile) {
+    @include breakpoint(small) {
         .navbar-collapse .last {
             display: none;
         }

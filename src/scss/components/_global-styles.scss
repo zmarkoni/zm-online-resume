@@ -6,7 +6,6 @@
     clear: both;
     padding: 100px 0;
 }
-
 .section_subtitle_description {
     text-align: center;
 }
@@ -45,4 +44,30 @@
 }
 .section_subtitle {
     margin-bottom: 100px;
+}
+@include breakpoint(small) {
+    .section {
+        padding: 70px 0 0;
+    }
+    .section_title {
+        margin-bottom: 20px;
+        .section_icon {
+            margin-top: -50px;
+            font-size: 32px;
+            line-height: 32px;
+        }
+        .lead {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .section_line {
+            top: 75px;
+        }
+    }
+    .h2 {
+        font-size: 32px;
+    }
+    .section_subtitle {
+        margin-bottom: 50px;
+    }
 }

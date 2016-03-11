@@ -6,31 +6,61 @@
     margin: 0;
     overflow: hidden;
     z-index: 3;
+    .parallax {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1000px;
+    }
+    .page_wrapper {
+        clear: both;
+        float: left;
+        width: 100%;
+        z-index: 3;
+        position: relative;
+        background-color: $bg1;
+    }
+    .header_bg {
+        position: relative;
+        float: left;
+        width: 100%;
+        background-image: url(/img/bg/header-bg3.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        // background-size: 100%;
+        background-size: cover;
+        z-index: 100;
+    }
+    @include breakpoint(small) {
+        // .header {
+        //     position: relative;
+        // }
+        // .navbar-header {
+        //     display: block;
+        //     top: auto;
+        //     left: auto;
+        //     float: right;
+        // }
+        .parallax {
+            position: relative;
+            top: auto;
+            left: auto;
+            float: left;
+            width: 100%;
+            height: 568px;
+        }
+        .text_logo {
+            width: 100%;
+            .text {
+                width: 100%;
+            }
+            .my_name {
+                font-size: 30px;
+            }
+            .resume_text {
+                font-size: 20px;
+            }
+        }
+    }
 }
-.parallax {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1000px;
-}
-.page_wrapper {
-    clear: both;
-    float: left;
-    width: 100%;
-    z-index: 3;
-    position: relative;
-    background-color: $bg1;
-}
-.header_bg {
-    position: relative;
-    float: left;
-    width: 100%;
-    background-image: url(/img/bg/header-bg3.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    // background-size: 100%;
-    background-size: cover;
-    z-index: 100;
-}
-
