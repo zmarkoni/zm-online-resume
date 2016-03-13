@@ -32,16 +32,9 @@
         background-size: cover;
         z-index: 100;
     }
+
     @include breakpoint(small) {
-        // .header {
-        //     position: relative;
-        // }
-        // .navbar-header {
-        //     display: block;
-        //     top: auto;
-        //     left: auto;
-        //     float: right;
-        // }
+
         .parallax {
             position: relative;
             top: auto;
@@ -50,17 +43,6 @@
             width: 100%;
             height: 568px;
         }
-        .text_logo {
-            width: 100%;
-            .text {
-                width: 100%;
-            }
-            .my_name {
-                font-size: 30px;
-            }
-            .resume_text {
-                font-size: 20px;
-            }
-        }
+
     }
 }

@@ -146,4 +146,29 @@
             transform: rotateX(10deg);
         }
     }
+    @include breakpoint(medium) {
+        .section_title {
+            margin-bottom: 30px;
+        }
+        .section_subtitle {
+            margin-bottom: 0;
+        }
+        .section_subtitle_description {
+            font-size: 20px;
+        }
+        .front_end_skills {
+            .col-md-4 {
+                width: 90%;
+                margin: 0 5% 30px;
+            }
+        }
+        .front_end_trio .chart {
+            margin-bottom: 50px;
+        }
+        .page_speed {
+            display: none;
+        }
+
+
+    }
 }

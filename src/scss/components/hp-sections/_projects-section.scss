@@ -9,7 +9,6 @@
     .github_project {
         text-align: center;
         margin-bottom: 30px;
-
     }
     .project_wrap {
         height: 230px;
@@ -224,5 +223,36 @@
         opacity: 1;
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
+    }
+    @include breakpoint(medium) {
+        .github_project {
+            margin-top: 50px;
+        }
+        .project_info_desc {
+            transform: translateY(0);
+            background-color: rgba(0,0,0,0.7);
+        }
+        .row>div {
+            margin-bottom: 0;
+        }
+        .project_text_wrap .section_subtitle_description {
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+        .fa-hand-o-right,
+        .fa-hand-o-left {
+            transform: rotate(90deg);
+        }
+        figure.effect {
+            margin-bottom: 30px;
+        }
+    }
+    @include breakpoint(small) {
+        figure.effect {
+
+            img {
+                height: initial;
+            }
+        }
     }
 }

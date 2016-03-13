@@ -36,6 +36,16 @@
             @content;
         }
     }
+    @else if $point == between-small-medium {
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            @content;
+        }
+    }
+    @else if $point == between-medium-big {
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            @content;
+        }
+    }
     @else if $point == between-small-big {
         @media (min-width: $mobile) and (max-width: $desktop) {
             @content;

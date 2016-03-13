@@ -12,7 +12,7 @@ var NavigationRunner = require('./src/modules/navigation/runner.js');
 var Application = function() {
 
     //new testRunner();
-    new ScrollRunner();
+    //new ScrollRunner();
     new HeaderRunner();
     new NavigationRunner();
     //new MailRunner();

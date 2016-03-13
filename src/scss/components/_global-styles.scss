@@ -1,6 +1,10 @@
 // ***********************************
 // Custom styles
 // ***********************************
+.page_wrapper {
+    z-index: 4;
+    position: relative;
+}
 .section {
     position: relative;
     clear: both;

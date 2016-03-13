@@ -65,7 +65,7 @@
         &.contact_section {
             padding-top: 15px;
             height: initial;
-            background:$bg4;
+            background: $bg4;
         }
         .map_overlay {
             display: none;
@@ -82,89 +82,106 @@
     margin-bottom: 40px;
     margin-top: 20px;
     vertical-align: middle;
-}
-.scope__definition:hover .scope__circle-over {
-    color: $colored;
-}
-.scope__definition:hover .scope__circle-viko:before {
-    -webkit-animation: spin 1s linear infinite;
-    -moz-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-}
-.scope__definition:hover .fa {
-    fill: #313131;
-}
-.scope__definition:hover .scope__title {
-    color: #fff;
-}
-.scope__definition:hover .scope__title:after {
-    height: 40px;
-}
-$circle_size: 80px;
-.scope__circle-viko {
-    position: relative;
-    margin: 0 auto;
-    height: $circle_size;
-    width: $circle_size;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 20px;
-}
-.scope__circle-viko:before {
-    position: absolute;
-    content: '';
-    display: block;
-    vertical-align: top;
-    height: 26px;
-    width: 26px;
-    margin: 0 auto;
-    height: $circle_size;
-    width: $circle_size;
-    background: url(/img/bg/scope-radial.png) no-repeat center center;
-    background-size: 100%;
-    z-index: 1;
-}
-.scope__circle-over {
-    position: absolute;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0 auto;
-    height: $circle_size;
-    width: $circle_size;
-    border-radius: 112px;
-    -webkit-box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
-    box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-    z-index: 2;
-}
-.scope__icon {
-    padding: 25px;
-    .fa {
-        display: block;
+    &:hover .scope__circle-over {
+        color: $colored;
+    }
+    &:hover .scope__circle-viko:before {
+        -webkit-animation: spin 1s linear infinite;
+        -moz-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+    }
+    &:hover .fa {
+        fill: #313131;
+    }
+    &:hover .scope__title {
+        color: #fff;
+    }
+    &:hover .scope__title:after {
+        height: 40px;
+    }
+    $circle_size: 80px;
+    .scope__circle-viko {
+        position: relative;
         margin: 0 auto;
-        width: 30px;
-        height: 30px;
-        font-size: 30px;
-        text-align: center;
-        cursor: pointer;
+        height: $circle_size;
+        width: $circle_size;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
     }
-}
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
+    .scope__circle-viko:before {
+        position: absolute;
+        content: '';
+        display: block;
+        vertical-align: top;
+        height: 26px;
+        width: 26px;
+        margin: 0 auto;
+        height: $circle_size;
+        width: $circle_size;
+        background: url(/img/bg/scope-radial.png) no-repeat center center;
+        background-size: 100%;
+        z-index: 1;
     }
-}
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
+    .scope__circle-over {
+        position: absolute;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0 auto;
+        height: $circle_size;
+        width: $circle_size;
+        border-radius: 112px;
+        -webkit-box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
+        box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+        z-index: 2;
     }
-}
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
+    .scope__icon {
+        padding: 25px;
+        .fa {
+            display: block;
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    @-moz-keyframes spin {
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    @-webkit-keyframes spin {
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    @keyframes spin {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @include breakpoint(small) {
+        margin: 10px auto;
+        .scope__circle-viko,
+        .scope__circle-viko:before,
+        .scope__circle-over {
+            width: 40px;
+            height: 40px;
+        }
+        .scope__icon {
+            padding: 11px;
+        }
+        .scope__icon .fa {
+            width: 15px;
+            height: 15px;
+            font-size: 15px;
+        }
     }
 }
 .email_modal_container {
@@ -207,5 +224,18 @@ $circle_size: 80px;
         float: left;
         color: $color1;
         margin-top: 10px;
+    }
+    @include breakpoint(small) {
+        min-height: 550px;
+        .modal-header {
+            padding: 20px 15px;
+            text-align: center;
+            .close {
+                display: none;
+            }
+        }
+        .modal-title {
+            font-size: 30px;
+        }
     }
 }

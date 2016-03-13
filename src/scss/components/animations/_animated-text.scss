@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     bottom: 35%;
-    padding: 0 15px;
+    padding: 0;
     color: $color4;
     text-align: center;
     // background: $screen_bg;
@@ -41,6 +41,28 @@
     .resume_text {
         font-family: "Courier", Arial, sans-serif;
         font-size: 35px;
+    }
+    @include breakpoint(between-small-big) {
+        width: 700px;
+        .text {
+            width: 700px;
+        }
+        .my_name {
+            font-size: 70px;
+        }
+    }
+    @include breakpoint(small) {
+        width: 90%;
+        margin: 0 auto;
+        .text {
+            width: 100%;
+        }
+        .my_name {
+            font-size: 30px;
+        }
+        .resume_text {
+            font-size: 20px;
+        }
     }
 }
 @keyframes type {
