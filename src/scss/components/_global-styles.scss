@@ -49,6 +49,12 @@
 .section_subtitle {
     margin-bottom: 100px;
 }
+
+#map {
+    background: none;
+    height: 500px;
+    width: 100%;
+}
 @include breakpoint(small) {
     .section {
         padding: 70px 0 0;

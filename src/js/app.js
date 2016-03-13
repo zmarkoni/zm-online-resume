@@ -17,7 +17,7 @@ var Application = function() {
     new HeaderRunner();
     new NavigationRunner();
     //new MailRunner();
-    // new MapRunner();
+    new MapRunner();
 };
 
 

@@ -1,40 +1,42 @@
 // var Events = require('./events/listener.js');
 
+
 var MapRunner = function() {
+    var apiKey = 'AIzaSyC5SklzulGWAjXKdyMA9MBOXCOFiCVam2w';
+
+    var myLatlng = {
+        lat: 45.267135,
+        lng: 19.833550
+    };
+    var mapOptions = {
+        element: document.getElementById('map'),
+        center: myLatlng,
+        zoom: 4,
+        zoomControl: false,
+        scaleControl: false,
+        scrollwheel: false,
+        disableDoubleClickZoom: true
+    };
 
 
-    if(google && 'maps' in google) {
-        console.log('Google maps loaded');
-        initMap();
-    } else {
-        window.addEventListener('load', function() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC5SklzulGWAjXKdyMA9MBOXCOFiCVam2w&callback=initMap';
-            document.body.appendChild(script);
-        });
-    }
+    require('google-maps-api')(apiKey);
 
-    // var apiKey = 'AIzaSyC5SklzulGWAjXKdyMA9MBOXCOFiCVam2w';
+    var map = require('google-maps-api/map')(mapOptions).then(function(map) {
 
+        // do something with the map here
 
-
-    function initMap() {
-        var map;
-
-        var myLatlng = {
-            lat: 45.267135,
-            lng: 19.833550
-        };
+        //use the google.maps object as you please
+        console.log('zzz');
+        // var map;
 
         var contentString = '<div id="content">' +
             '<span class="map_title">Novi Sad</span>' +
             '</div>';
 
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: myLatlng,
-            zoom: 4
-        });
+        // map = new google.maps.Map(document.getElementById('map'), {
+        //     center: myLatlng,
+        //     zoom: 4
+        // });
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString
@@ -63,7 +65,7 @@ var MapRunner = function() {
             map.setZoom(4);
             map.setCenter(marker.getPosition());
         });
-    }
+    });
 };
 
 module.exports = MapRunner;
