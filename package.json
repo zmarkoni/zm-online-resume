@@ -36,6 +36,7 @@
     "inherits": "^2.0.1",
     "jquery": "^2.1.4",
     "jquery-easing": "0.0.1",
+    "load-google-maps-api": "0.0.2",
     "scrollwatch": "^1.1.0"
   }
 }
