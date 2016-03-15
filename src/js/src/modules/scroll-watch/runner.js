@@ -1,4 +1,3 @@
-var CubeEvents = require('./events/cube-listener.js');
 // var ScrollWatchManager = require('./models/scrollWatch-manager');
 var Extensions = require('../../extensions.js');
 

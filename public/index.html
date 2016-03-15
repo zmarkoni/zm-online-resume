@@ -14,7 +14,7 @@
 
 <body id="app" data-spy="scroll" data-target="#navbar-example">
     <header class="js_header header">
-        <nav class="navbar" role="navigation">
+        <nav class="navbar" >
             <input type="checkbox" id="navbar-toggle-cbox">
             <div class="navbar-header">
                 <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </label>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/" title="zmarkoni/online-resume">
                     <div class="animated_logo first">
                         <span class="logo_dot dot_1"></span>
                         <span class="logo_dot dot_2"></span>
@@ -286,34 +286,34 @@
                     <div class="front_end_trio">
                         <!-- HTML Chart -->
 
-                        <figure class="chart" data-percent="100">
+                        <div class="figure chart" data-percent="100">
                             <span class="chart_text">HTML5</span>
-                            <figcaption>HTML</figcaption>
-                            <img class="html" src="/img/icons/html5-logo.svg">
+                            <div class="figure_title">HTML</div>
+                            <img class="html" src="/img/icons/html5-logo.svg" alt="html5">
                             <svg width="200" height="200">
                                 <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)" />
                             </svg>
-                        </figure>
+                        </div>
                         <!-- CSS Chart -->
 
-                        <figure class="chart" data-percent="100">
+                        <div class="figure chart" data-percent="100">
                             <span class="chart_text">CSS3</span>
-                            <figcaption>CSS</figcaption>
-                            <img class="css" src="/img/icons/css3-logo.svg">
+                            <div class="figure_title">CSS</div>
+                            <img class="css" src="/img/icons/css3-logo.svg" alt="css3">
                             <svg width="200" height="200">
                                 <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)" />
                             </svg>
-                        </figure>
+                        </div>
                         <!-- Javascript Chart -->
 
-                        <figure class="chart" data-percent="75">
+                        <div class="figure chart" data-percent="75">
                             <span class="chart_text">JS</span>
-                            <figcaption>Javascript</figcaption>
-                            <img class="javascript" src="/img/icons/js-logo.svg">
+                            <div class="figure_title">Javascript</div>
+                            <img class="javascript" src="/img/icons/js-logo.svg" alt="JS">
                             <svg width="200" height="200">
                                 <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)" />
                             </svg>
-                        </figure>
+                        </div>
 
                     </div>
                     <p class="info-box hide">This is pure CSS and SVG animation</p>
@@ -630,51 +630,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="cube_wrap">
-                    <div class="container">
-                        <h4 class="section_title"><i class="fa fa-cog"></i>Favorite tools</h4>
-
-                        <div class="controls">
-                            <a class="js_toggleShape button button_one" href="https://github.com/zmarkoni/devappsit">Toggle tools</a>
-                            <a class="js_toggleBackfaces button button_one" href="javascript:;">Toggle backfaces</a>
-                            <p class="contact_link"><a href="https://github.com/zmarkoni/devappsit" target="_blank"> Check code on GitHub</a></p>
-                        </div>
-
-                        <div id="container">
-                            <div id="stage">
-                                <div id="shape" class="cube js_cube start_rotate">
-                                    <div class="plane one"></div>
-                                    <div class="plane two">
-                                        <a href="https://github.com/zmarkoni/devappsit" target="_blank" class="">
-                                            <img class="" src="/img/icons/html5-logo.svg">
-                                        </a>
-
-                                    </div>
-                                    <div class="plane three">
-                                        <a href="https://github.com/zmarkoni/devappsit" target="_blank" class="">
-                                            <img class="" src="/img/icons/css3-logo.svg">
-                                        </a>
-
-                                    </div>
-                                    <div class="plane four">
-                                        <a href="https://github.com/zmarkoni/devappsit" target="_blank" class="">
-                                            <img class="" src="/img/icons/js-logo.svg">
-                                        </a>
-
-                                    </div>
-                                    <div class="plane five">
-                                        <a href="https://github.com/zmarkoni/devappsit" target="_blank" class="">
-                                            <img class="" src="/img/icons/webicon-apple.svg">
-                                        </a>
-                                    </div>
-                                    <div class="plane six"></div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </section>
 
             <section id="projects" class="section projects_section">
@@ -688,7 +643,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4 col-sm-12 project_wrap">
                                 <a class="project_link" href="https://github.com/zmarkoni/devappsit" target="_blank">
-                                    <img class="project_logo" src="/img/icons/github-logo.svg">
+                                    <img class="project_logo" src="/img/icons/github-logo.svg" alt="zmarkoni">
                                     <span class="project_info_desc">See code on GitHub</span>
                                 </a>
                             </div>
@@ -697,7 +652,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4 col-sm-12 project_wrap">
                                 <a class="project_link" href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">
-                                    <img class="project_logo" src="/img/icons/developers-logo.svg">
+                                    <img class="project_logo" src="/img/icons/developers-logo.svg" alt="project speed">
                                     <span class="project_info_desc">Check website ranking</span>
                                 </a>
                             </div>
@@ -705,9 +660,9 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-12 col-xs-12">
-                            <figure class="effect">
-                                <img src="/img/projects/corporate-cars.jpg" alt="">
-                                <figcaption>
+                            <div class="figure effect">
+                                <img src="/img/projects/corporate-cars.jpg" alt="portfolio">
+                                <div class="figure_title">
                                     <h3>Corporate cars</h3>
                                     <p>Corporate Cars provides quality transfers with luxury cars</p>
                                     <p>
@@ -717,16 +672,16 @@
                                     <span class="icon">
                                         <i class="fa fa-external-link"></i>
                                     </span>
-                                </figcaption>
-                            </figure>
+                                </div>
+                            </div>
                         </div>
 
 
                         <div class="col-md-6 col-sm-12 col-xs-12">
-                            <figure class="effect">
-                                <img src="/img/projects/completechirocare.jpg" alt="">
+                            <div class="figure effect">
+                                <img src="/img/projects/completechirocare.jpg" alt="portfolio">
 
-                                <figcaption>
+                                <div class="figure_title">
                                     <h3>Complete Chiropractic</h3>
                                     <p>
                                         Complete Chiropractic is specialists in the treatment of mums and kids
@@ -739,16 +694,16 @@
                                     <span class="icon">
                                         <i class="fa fa-external-link"></i>
                                     </span>
-                                </figcaption>
-                            </figure>
+                                </div>
+                            </div>
                         </div>
 
 
                         <div class="col-md-6 col-sm-12 col-xs-12">
-                            <figure class="effect">
-                                <img src="/img/projects/tacklemania.jpg" alt="">
+                            <div class="figure effect">
+                                <img src="/img/projects/tacklemania.jpg" alt="portfolio">
 
-                                <figcaption>
+                                <div class="figure_title">
                                     <h3>Tacklemania</h3>
                                     <p>Fishing online store</p>
                                     <p>
@@ -758,16 +713,16 @@
                                     <span class="icon">
                                         <i class="fa fa-external-link"></i>
                                     </span>
-                                </figcaption>
-                            </figure>
+                                </div>
+                            </div>
                         </div>
 
 
                         <div class="col-md-6 col-sm-12 col-xs-12">
-                            <figure class="effect">
-                                <img src="/img/projects/sairdacasca.jpg" alt="">
+                            <div class="figure effect">
+                                <img src="/img/projects/sairdacasca.jpg" alt="portfolio">
 
-                                <figcaption>
+                                <div class="figure_title">
                                     <h3>Sairdacasca</h3>
                                     <p>Build a website for the agency in Lisbon</p>
                                     <p>
@@ -777,8 +732,8 @@
                                     <span class="icon">
                                         <i class="fa fa-external-link"></i>
                                     </span>
-                                </figcaption>
-                            </figure>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -876,7 +831,7 @@
             </section>
         </div>
     </main>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" async></script>
     <!-- <script type="text/javascript">
         var clientId = '402897396216-k7o8njc2iv9aokths744hodeipsu04sa.apps.googleusercontent.com';
         var apiKey = 'AIzaSyAliMDYk4HFP2EWX7wXdBcnZD4jRFbL9qk';

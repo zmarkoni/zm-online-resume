@@ -1,6 +1,6 @@
 .projects_section {
     // @include gradient($bg1,$bg6);
-    background-image: url(/img/bg/bg-silver-pattern.jpg);
+    background-image: url(/img/bg/bg-silver-pattern.png);
     background-repeat: repeat;
     background-position: center center;
     .container {
@@ -93,7 +93,7 @@
     }
     .section_title {
         .h2 {
-            background-image: url(/img/bg/bg-silver-pattern.jpg);
+            background-image: url(/img/bg/bg-silver-pattern.png);
         }
     }
     a {
@@ -105,27 +105,27 @@
     .row > div {
         margin-bottom: 30px;
     }
-    figure {
+    .figure {
         position: relative;
         overflow: hidden;
         margin: 0;
     }
-    figure h3 {
+    .figure h3 {
         color: #FFF;
         font-weight: 600;
         margin-bottom: 5px;
     }
-    figure p > strong {
+    .figure p > strong {
         width: 60px;
         display: inline-block;
         margin: 0;
     }
-    figure img {
+    .figure img {
         width: 110%;
         max-width: 110%;
         height: 450px;
     }
-    figure figcaption {
+    .figure .figure_title {
         padding: 20px 30px;
         position: absolute;
         top: 0;
@@ -133,7 +133,7 @@
         height: 100%;
         width: 100%;
     }
-    figure a {
+    .figure a {
         z-index: 1000;
         text-indent: 200%;
         white-space: nowrap;
@@ -145,7 +145,7 @@
         height: 100%;
         width: 100%;
     }
-    figure .icon {
+    .figure .icon {
         background: rgba(0, 0, 0, 0.8);
         position: absolute;
         top: 0;
@@ -153,7 +153,7 @@
         width: 48px;
         height: 48px;
     }
-    figure .icon .fa {
+    .figure .icon .fa {
         font-size: 18px;
         line-height: 18px;
         padding: 15px;
@@ -161,11 +161,11 @@
     /*---------------*/
     /***** EFFECT *****/
     /*---------------*/
-    figure.effect {
+    .figure.effect {
         background: rgba(0, 0, 0, 0.9);
         color: #FFF;
     }
-    figure.effect img {
+    .figure.effect img {
         width: -webkit-calc(100% + 20px);
         width: calc(100% + 20px);
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -175,15 +175,15 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
-    figure.effect:hover img {
+    .figure.effect:hover img {
         opacity: 0.2;
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
-    figure.effect figcaption {
+    .figure.effect .figure_title {
         text-align: left;
     }
-    figure.effect h3 {
+    .figure.effect h3 {
         position: relative;
         overflow: hidden;
         padding-bottom: 20px;
@@ -191,10 +191,10 @@
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
     }
-    figure.effect:hover h3 {
+    .figure.effect:hover h3 {
         opacity: 1;
     }
-    figure.effect h3::after {
+    .figure.effect h3::after {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -207,11 +207,11 @@
         -webkit-transform: translate3d(-100%,0,0);
         transform: translate3d(-100%,0,0);
     }
-    figure.effect:hover h3::after {
+    .figure.effect:hover h3::after {
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
-    figure.effect p {
+    .figure.effect p {
         padding-top: 10px;
         opacity: 0;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -219,7 +219,7 @@
         -webkit-transform: translate3d(100%,0,0);
         transform: translate3d(100%,0,0);
     }
-    figure.effect:hover p {
+    .figure.effect:hover p {
         opacity: 1;
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
@@ -243,12 +243,12 @@
         .fa-hand-o-left {
             transform: rotate(90deg);
         }
-        figure.effect {
+        .figure.effect {
             margin-bottom: 30px;
         }
     }
     @include breakpoint(small) {
-        figure.effect {
+        .figure.effect {
 
             img {
                 height: initial;
