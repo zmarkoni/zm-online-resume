@@ -8,7 +8,7 @@ var Events = function() {
     new HeaderManager().fixHeaderHeight();
 
     if( Sandbox.screen().isLarge() ) {
-        console.log('big only');
+        // console.log('big only');
         $(window).on('scroll', function() {
             new HeaderManager().scrollHeader();
         });
