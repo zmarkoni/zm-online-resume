@@ -162,13 +162,14 @@
                 margin: 0 5% 30px;
             }
         }
-        .front_end_trio .chart {
-            margin-bottom: 50px;
+        .front_end_trio {
+            display: none;
         }
         .page_speed {
             display: none;
         }
-
+    }
+    @include breakpoint(small) {
 
     }
 }

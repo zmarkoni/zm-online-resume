@@ -70,6 +70,15 @@
         .map_overlay {
             display: none;
         }
+        .copyright {
+            position: relative;
+            left: auto;
+            bottom: auto;
+            float: left;
+            margin-top: 20px;
+            background-color: transparent;
+            border-top: 1px solid #B5B5B5;
+        }
     }
 }
 /*=============== email form ==============================*/
@@ -182,60 +191,64 @@
             height: 15px;
             font-size: 15px;
         }
+
     }
 }
-.email_modal_container {
-    position: relative;
-    min-height: 400px;
-    background-color: transparent;
-    z-index: 2;
-    .modal-header {
-        padding: 0 15px;
-        border-bottom: none;
-    }
-    .modal-title {
-        color: $color1;
-        text-transform: initial;
-    }
-    .form-control {
-        background-color: rgba(0,0,0,0.6);
-        border-color: transparent;
-        color: $color1;
-    }
-    .button_email {
-        float: right;
-        padding: 10px 15px;
-        color: $color1;
-        font-size: 16px;
-        line-height: 16px;
-        text-decoration: none;
-        text-transform: uppercase;
-        @include border-radius(10px);
-        background-color: $bg3;
-        @include transition(0.5s);
-        &:hover {
-            background-color: rgba(0,0,0,0.6);
-        }
-        .fa {
-            margin-left: 5px;
-        }
-    }
-    .message_success {
-        float: left;
-        color: $color1;
-        margin-top: 10px;
-    }
-    @include breakpoint(small) {
-        min-height: 550px;
-        .modal-header {
-            padding: 20px 15px;
-            text-align: center;
-            .close {
-                display: none;
-            }
-        }
-        .modal-title {
-            font-size: 30px;
-        }
-    }
-}
+
+// .email_modal_container {
+//     position: relative;
+//     min-height: 400px;
+//     background-color: transparent;
+//     z-index: 2;
+//     .modal-header {
+//         padding: 0 15px;
+//         border-bottom: none;
+//     }
+//     .modal-title {
+//         color: $color1;
+//         text-transform: initial;
+//     }
+//     .form-control {
+//         background-color: rgba(0,0,0,0.6);
+//         border-color: transparent;
+//         color: $color1;
+//     }
+//     .button_email {
+//         float: right;
+//         padding: 10px 15px;
+//         color: $color1;
+//         font-size: 16px;
+//         line-height: 16px;
+//         text-decoration: none;
+//         text-transform: uppercase;
+//         @include border-radius(10px);
+//         background-color: $bg3;
+//         @include transition(0.5s);
+//         &:hover {
+//             background-color: rgba(0,0,0,0.6);
+//         }
+//         .fa {
+//             margin-left: 5px;
+//         }
+//     }
+//     .message_success {
+//         float: left;
+//         color: $color1;
+//         margin-top: 10px;
+//     }
+//     @include breakpoint(small) {
+//         min-height: 550px;
+//         .modal-header {
+//             padding: 20px 15px;
+//             text-align: center;
+//             z-index: 2;
+//             .close {
+//                 display: none;
+//             }
+//         }
+//         .modal-title {
+//             font-size: 30px;
+//         }
+//
+//     }
+// }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +8,11 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css" async>
 </head>
-
 <body id="app" data-spy="scroll" data-target="#navbar-example">
     <header class="js_header header">
-        <nav class="navbar" >
+        <nav class="navbar">
             <input type="checkbox" id="navbar-toggle-cbox">
             <div class="navbar-header">
                 <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -651,7 +649,7 @@
                                 <h3 class="section_subtitle_description"><i class="fa fa-hand-o-left"></i> Check this Project <i class="fa fa-hand-o-right"></i></h3>
                             </div>
                             <div class="col-xs-12 col-md-4 col-sm-12 project_wrap">
-                                <a class="project_link" href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">
+                                <a class="project_link" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fzmarkoni.github.io&tab=desktop" target="_blank">
                                     <img class="project_logo" src="/img/icons/developers-logo.svg" alt="project speed">
                                     <span class="project_info_desc">Check website ranking</span>
                                 </a>
@@ -743,7 +741,6 @@
 
             <section id="contact" class="section contact_section">
 
-                <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5SklzulGWAjXKdyMA9MBOXCOFiCVam2w&callback=initMap" async defer></script> -->
                 <div class="map_overlay"></div>
                 <div class="container">
                     <div class="section_title" data-scroll-watch>
@@ -752,185 +749,62 @@
                     <div class="row">
                         <div class="col-sm-4 col-sm-offset-2 contact_info">
 
-                        <div class="scope__definition">
-                            <div class="scope__circle-viko">
-                                <div class="scope__circle-over">
-                                    <div class="scope__icon">
-                                        <i class="fa fa-linkedin"></i>
+                            <div class="scope__definition">
+                                <div class="scope__circle-viko">
+                                    <div class="scope__circle-over">
+                                        <div class="scope__icon">
+                                            <i class="fa fa-linkedin"></i>
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="contact_link"><a href="https://rs.linkedin.com/pub/zoran-markovic" target="_blank"> LinkedIn profile</a></p>
                             </div>
-                            <p class="contact_link"><a href="https://rs.linkedin.com/pub/zoran-markovic" target="_blank"> LinkedIn profile</a></p>
-                        </div>
 
-                        <div class="scope__definition">
-                            <div class="scope__circle-viko">
-                                <div class="scope__circle-over">
-                                    <div class="scope__icon">
-                                        <i class="fa fa-home"></i>
+                            <div class="scope__definition">
+                                <div class="scope__circle-viko">
+                                    <div class="scope__circle-over">
+                                        <div class="scope__icon">
+                                            <i class="fa fa-home"></i>
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="contact_link">Novi Sad, Serbia</p>
                             </div>
-                            <p class="contact_link">Novi Sad, Serbia</p>
                         </div>
-
-                        <div class="scope__definition">
-                            <div class="scope__circle-viko">
-                                <div class="scope__circle-over">
-                                    <div class="scope__icon">
-                                        <i class="fa fa-download"></i>
+                        <div class="col-sm-4 col-sm-offset-2 contact_info">
+                            <div class="scope__definition">
+                                <div class="scope__circle-viko">
+                                    <div class="scope__circle-over">
+                                        <div class="scope__icon">
+                                            <i class="fa fa-download"></i>
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="contact_link"><a href="javascrip:;" target="_blank"> Download Resume</a></p>
                             </div>
-                            <p class="contact_link"><a href="javascrip:;" target="_blank"> Download Resume</a></p>
-                        </div>
-
-                    </div>
-
-                    <button id="authorize-button" class="btn btn-primary hidden">Authorize</button>
-
-                    <div class="col-sm-4 email_modal_container" id="compose-modal" tabindex="-1" role="dialog">
-                        <div class="modal_wrap">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">Get in touch</h4>
-                            </div>
-                            <form onsubmit="return sendEmail();">
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="compose-to" placeholder="markonimobile@gmail.com" readonly />
+                            <div class="scope__definition">
+                                <div class="scope__circle-viko">
+                                    <div class="scope__circle-over">
+                                        <div class="scope__icon">
+                                            <i class="fa fa-envelope-o"></i>
+                                        </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="compose-subject" placeholder="Subject" required />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="compose-message" placeholder="Message" rows="10" required></textarea>
-                                    </div>
-                                    <div class="form-group message_success hidden">
-                                        <p>Message has successfully sent!</p>
-                                    </div>
-                                    <button type="submit" id="send-button" class="button button_email">Send <i class="fa fa-paper-plane"></i></button>
                                 </div>
-
-                            </form>
-
+                                <p class="contact_link">
+                                    <a href="mailto:markonimobile@gmail.com" target="_blank">markonimobile@gmail.com</a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+
                     </div>
                     <div class="copyright">
                         Copyright © 2016 Zoran Markovic
                     </div>
                 </div>
             </section>
-            <section class="section map_section">
-                <div id="map"></div>
-            </section>
+
         </div>
     </main>
     <script src="js/main.js" async></script>
-    <!-- <script type="text/javascript">
-        var clientId = '402897396216-k7o8njc2iv9aokths744hodeipsu04sa.apps.googleusercontent.com';
-        var apiKey = 'AIzaSyAliMDYk4HFP2EWX7wXdBcnZD4jRFbL9qk';
-        var scopes =
-            'https://www.googleapis.com/auth/gmail.readonly ' +
-            'https://www.googleapis.com/auth/gmail.send';
-
-        function handleClientLoad() {
-            gapi.client.setApiKey(apiKey);
-            window.setTimeout(checkAuth, 1);
-        }
-
-        function checkAuth() {
-            gapi.auth.authorize({
-                client_id: clientId,
-                scope: scopes,
-                immediate: true
-            }, handleAuthResult);
-        }
-
-        function handleAuthClick() {
-            gapi.auth.authorize({
-                client_id: clientId,
-                scope: scopes,
-                immediate: false
-            }, handleAuthResult);
-            return false;
-        }
-
-        function handleAuthResult(authResult) {
-            if (authResult && !authResult.error) {
-                console.log('authentitication sucess');
-                loadGmailApi();
-                // $('#authorize-button').remove();
-                // $('.table-inbox').removeClass("hidden");
-                // $('#compose-button').removeClass("hidden");
-            } else {
-                console.log('authentitication error!');
-                // $('#authorize-button').removeClass("hidden");
-                // $('#authorize-button').on('click', function() {
-                //     handleAuthClick();
-                // });
-            }
-        }
-
-        function loadGmailApi() {
-            gapi.client.load('gmail', 'v1');
-        }
-
-        function sendEmail() {
-            $('#send-button').addClass('disabled');
-
-            sendMessage({
-                    'To': 'markonimobile@gmail.com',
-                    'Subject': $('#compose-subject').val()
-                },
-                $('#compose-message').val(),
-                composeTidy
-            );
-
-            return false;
-        }
-
-        function composeTidy() {
-            // $('#compose-modal').modal('hide');
-
-            $('#compose-to').val('');
-            $('#compose-subject').val('');
-            $('#compose-message').val('');
-
-            $('#send-button').removeClass('disabled');
-            new messageSuccess();
-        }
-
-
-        function sendMessage(headers_obj, message, callback) {
-            var email = '';
-
-            for (var header in headers_obj)
-                email += header += ": " + headers_obj[header] + "\r\n";
-
-            email += "\r\n" + message;
-
-            var sendRequest = gapi.client.gmail.users.messages.send({
-                'userId': 'me',
-                'resource': {
-                    'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
-                }
-            });
-
-            return sendRequest.execute(callback);
-        }
-
-        function messageSuccess() {
-            $('.message_success').removeClass('hidden');
-            console.log('message is sent');
-        }
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script> -->
 </body>
-
 </html>

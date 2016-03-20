@@ -1,4 +1,5 @@
-# zm-superCell
+# zmarkoni.github.io
+
 GULP automated workflow based on Joel Longie supperCell
 
 # SuperCell 0.0.2

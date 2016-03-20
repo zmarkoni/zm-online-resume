@@ -1,6 +1,4 @@
 // var Events = require('./events/listener.js');
-
-
 var MapRunner = function() {
     var apiKey = 'AIzaSyC5SklzulGWAjXKdyMA9MBOXCOFiCVam2w';
 
@@ -11,11 +9,11 @@ var MapRunner = function() {
     var mapOptions = {
         element: document.getElementById('map'),
         center: myLatlng,
-        zoom: 4,
-        zoomControl: false,
-        scaleControl: false,
-        scrollwheel: false,
-        disableDoubleClickZoom: true
+        zoom: 4
+        // zoomControl: false,
+        // scaleControl: false,
+        // scrollwheel: false,
+        // disableDoubleClickZoom: true
     };
 
 
@@ -53,13 +51,13 @@ var MapRunner = function() {
             infowindow.open(map, marker);
         });
 
-        map.addListener('center_changed', function() {
-            // 3 seconds after the center of the map has changed, pan back to the
-            // marker.
-            window.setTimeout(function() {
-                map.panTo(marker.getPosition());
-            }, 1000);
-        });
+        // map.addListener('center_changed', function() {
+        //     // 3 seconds after the center of the map has changed, pan back to the
+        //     // marker.
+        //     window.setTimeout(function() {
+        //         map.panTo(marker.getPosition());
+        //     }, 1000);
+        // });
 
         marker.addListener('click', function() {
             map.setZoom(4);

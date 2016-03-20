@@ -31,7 +31,7 @@ function handleErrors() {
 // add custom browserify options here
 var customOpts = {
   entries: ['./src/js/app.js'],
-  debug: true
+  debug: false
 };
 
 var opts = assign({}, watchify.args, customOpts);
@@ -54,7 +54,7 @@ function bundle() {
     .pipe(source('main.js'))
     // optional, remove if you don't need to buffer file contents
     .pipe(buffer())
-    // .pipe(uglify()) //add for build
+    .pipe(uglify()) //add for build
     // optional, remove if you dont want sourcemaps
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
     // Add transformation tasks to the pipeline here.
