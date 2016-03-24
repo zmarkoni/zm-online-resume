@@ -31,7 +31,7 @@ function handleErrors() {
 // add custom browserify options here
 var customOpts = {
   entries: ['./src/js/app.js'],
-  debug: true
+  debug: false
 };
 
 var opts = assign({}, watchify.args, customOpts);
