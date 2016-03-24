@@ -13,7 +13,7 @@ var Application = function() {
     new HeaderRunner();
     new NavigationRunner();
     //new ScrollRunner();
-    //new WidgetRunner();
+    new WidgetRunner();
 };
 
 

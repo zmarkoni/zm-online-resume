@@ -15,6 +15,10 @@ var imagemin      = require('gulp-imagemin');
 var size          = require('gulp-size');
 var cache         = require('gulp-cache');
 
+var path          = require('path');
+var newer         = require('gulp-newer');
+var concat        = require('gulp-concat');
+var injectHtml    = require('gulp-inject-stringified-html');
 // ////////////////////////////////////////////////
 // Javascript Browserify, Watchify, Babel, React
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
@@ -42,7 +46,12 @@ b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal
 //b.on('error', handleErrors); Testiraj ovo
 
+
 function bundle() {
+
+    var dest = './public/js';
+    var filename = 'main.js'
+
   return b.bundle()
     // log errors if they happen - OVO NE RADI
     .on('error', gutil.log.bind(gutil, gutil.colors.red(
@@ -54,9 +63,12 @@ function bundle() {
     .pipe(source('main.js'))
     // optional, remove if you don't need to buffer file contents
     .pipe(buffer())
-    .pipe(uglify()) //add for build
+    //.pipe(uglify()) //add for build
     // optional, remove if you dont want sourcemaps
+    //.pipe(newer(path.join(dest, filename)))
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
+    .pipe(injectHtml())
+    .pipe(concat(filename))
     // Add transformation tasks to the pipeline here.
     .pipe(sourcemaps.write('../maps')) // writes .map file
     .pipe(gulp.dest('./public/js'))
