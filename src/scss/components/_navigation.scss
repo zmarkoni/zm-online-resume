@@ -32,7 +32,7 @@
             position: relative;
             display: inline-block;
             float: none;
-            background: url(../img/divider.png) left no-repeat;
+            // background: url(../img/divider.png) left no-repeat;
             text-align: center;
             transition: background-color 0.1s ease-out;
             &:active,
@@ -97,7 +97,7 @@
         .navbar-collapse .last {
             position: absolute;
             top: 0;
-            background: url(../img/divider.png) left no-repeat;
+            // background: url(../img/divider.png) left no-repeat;
             right: 0;
             a {
                 width: 55px;

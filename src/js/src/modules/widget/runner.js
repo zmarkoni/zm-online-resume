@@ -7,7 +7,7 @@ var widgetRunner = function() {
     function sayHello() {
         return {
             gulp_inject: '/src/templates/test.html'
-        }; // <-- and this!
+        };
     };
     var html = sayHello();
     console.log(html);

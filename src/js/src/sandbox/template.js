@@ -1,12 +1,15 @@
 var $ = require('jquery');
-var Twig = require('twig');
 
-var Template = function(Html, data, context) {
-    var template = Twig.twig({
-        data: Html
-    });
-    $(context).html(template.render(data));
+var template = function(html, container) {
+    this.html = html;
+    this.container = container;
 };
-    //return Template;
 
-module.exports = Template;
+template.prototype = {
+
+    renderTemplate: function() {
+        $(this.container).html(this.html);
+    }
+};
+
+module.exports = template;

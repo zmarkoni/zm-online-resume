@@ -7,7 +7,7 @@ navigationManager.prototype = {
 
     mobileNavigation: function() {
         $('.navbar-collapse').removeClass('in').addClass('collapse');
-        console.log('mobileNavigation works!');
+        //console.log('mobileNavigation works!');
     },
 
     scrollToSection: function(event) {
@@ -26,8 +26,7 @@ navigationManager.prototype = {
             scrollTop: target.offset().top
           }, 1000);
 
-
-          console.log('scrollToSection works!');
+          //console.log('scrollToSection works!');
           return false;
         }
 

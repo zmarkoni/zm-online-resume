@@ -15,6 +15,7 @@ var imagemin      = require('gulp-imagemin');
 var size          = require('gulp-size');
 var cache         = require('gulp-cache');
 var injectHtml    = require('gulp-inject-stringified-html');
+
 // ////////////////////////////////////////////////
 // Javascript Browserify, Watchify, Babel, React
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
@@ -55,7 +56,7 @@ function bundle() {
     .pipe(source('main.js'))
     .pipe(injectHtml()) // inject-stringified-html
     .pipe(buffer())
-    .pipe(uglify()) //add for build
+    // .pipe(uglify()) //add for build
     // optional, remove if you dont want sourcemaps
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
     // Add transformation tasks to the pipeline here.
