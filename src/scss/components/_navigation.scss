@@ -68,6 +68,11 @@
                     // background-color: $color4;
                     color: $color5;
                 }
+                &.inactive {
+                        pointer-events: none;
+                        cursor: default;
+                        opacity: 0.5;
+                }
             }
             span {
                 position: absolute;

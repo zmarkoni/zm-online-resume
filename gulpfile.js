@@ -1,20 +1,18 @@
-var watchify      = require('watchify');
-var browserify    = require('browserify');
 var gulp          = require('gulp');
+var browserify    = require('browserify');
+var watchify      = require('watchify');
+var browserSync   = require('browser-sync');
 var source        = require('vinyl-source-stream');
 var buffer        = require('vinyl-buffer');
 var gutil         = require('gulp-util');
 var babelify      = require('babelify');
-var uglify        = require('gulp-uglify');
 var sourcemaps    = require('gulp-sourcemaps');
 var assign        = require('lodash.assign');
-var browserSync   = require('browser-sync');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
-var imagemin      = require('gulp-imagemin');
-var size          = require('gulp-size');
-var cache         = require('gulp-cache');
-var injectHtml    = require('gulp-inject-stringified-html');
+
+var cache         = require('gulp-cache');  //clear local cash
+var injectHtml    = require('gulp-inject-stringified-html'); // browserify include HTML in JS
 
 // ////////////////////////////////////////////////
 // Javascript Browserify, Watchify, Babel, React
@@ -32,7 +30,7 @@ function handleErrors() {
 // add custom browserify options here
 var customOpts = {
   entries: ['./src/js/app.js'],
-  debug: false
+  debug: true // show/hide source maps
 };
 
 var opts = assign({}, watchify.args, customOpts);
@@ -56,7 +54,6 @@ function bundle() {
     .pipe(source('main.js'))
     .pipe(injectHtml()) // inject-stringified-html
     .pipe(buffer())
-    // .pipe(uglify()) //add for build
     // optional, remove if you dont want sourcemaps
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
     // Add transformation tasks to the pipeline here.
@@ -108,13 +105,7 @@ gulp.task('styles', function() {
 
 gulp.task('images', function() {
   gulp.src('src/img/**/*.{jpg,jpeg,png,gif,svg}') //all styles are included in style.scss
-    .pipe(imagemin({
-      optimizationLevel: 3,
-      progessive: true,
-      interlaced: true
-    }))
     .pipe(gulp.dest('public/img'))
-    .pipe(size())
     .pipe(browserSync.reload({stream:true}));
 });
 

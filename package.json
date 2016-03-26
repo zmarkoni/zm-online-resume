@@ -22,7 +22,6 @@
     "gulp-sass": "^2.0.4",
     "gulp-size": "^2.0.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.4.2",
     "gulp-util": "^3.0.6",
     "jshint": "^2.8.0",
     "lodash.assign": "^3.2.0",
@@ -37,6 +36,7 @@
     "inherits": "^2.0.1",
     "jquery": "^2.1.4",
     "jquery-easing": "0.0.1",
-    "scrollwatch": "^1.1.0"
+    "scrollwatch": "^1.1.0",
+    "webfontloader": "^1.6.24"
   }
 }

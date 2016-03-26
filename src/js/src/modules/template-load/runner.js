@@ -34,6 +34,8 @@ var templateRunner = function() {
     Sandbox.template(experiance, '#experiance').renderTemplate();
     Sandbox.template(projects, '#projects').renderTemplate();
     Sandbox.template(skills, '#skills').renderTemplate();
+
+    $('#navbar .inactive').removeClass('inactive');
 };
 
 module.exports = templateRunner;

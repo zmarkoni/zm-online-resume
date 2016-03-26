@@ -8,7 +8,10 @@ var template = function(html, container) {
 template.prototype = {
 
     renderTemplate: function() {
-        $(this.container).html(this.html);
+        if(this.html != undefined && (this.container).length != 0) {
+            $(this.container).html(this.html);
+        }
+
     }
 };
 
