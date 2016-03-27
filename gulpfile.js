@@ -14,6 +14,7 @@ var autoprefixer  = require('gulp-autoprefixer');
 var cache         = require('gulp-cache');  //clear local cash
 var injectHtml    = require('gulp-inject-stringified-html'); // browserify include HTML in JS
 
+var critical      = require('critical'); //
 // ////////////////////////////////////////////////
 // Javascript Browserify, Watchify, Babel, React
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
@@ -119,6 +120,21 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['styles']);
 });
 
+// ////////////////////////////////////////////////
+// Watch Tasks
+// ////////////////////////////////////////////////
+gulp.task('critical', function () {
+    critical.generate({
+        inline: true,
+        base: 'public/',
+        src: 'index.html',
+        dest: 'public/index-critical.html',
+        minify: true,
+        width: 320,
+        height: 480
+    });
+});
+//gulp critical
 
 gulp.task('clear', function (done) {
   return cache.clearAll(done);
