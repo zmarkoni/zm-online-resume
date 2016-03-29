@@ -155,6 +155,7 @@ gulp.task('default', ['clear', 'js', 'styles', 'images' , 'browserSync', 'watch'
 gulp.task('minifyHTML', function() {
   return gulp.src('public/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(cssmin())
     .pipe(gulp.dest('dist'))
 });
 
