@@ -14,7 +14,11 @@ var autoprefixer  = require('gulp-autoprefixer');
 var cache         = require('gulp-cache');  //clear local cash
 var injectHtml    = require('gulp-inject-stringified-html'); // browserify include HTML in JS
 
-var critical      = require('critical'); //
+//optimization
+var critical      = require('critical'); // find critical CSS for above the fold content
+var htmlmin       = require('gulp-htmlmin');
+var cssmin        = require('gulp-cssmin');
+var jsmin         = require('gulp-jsmin');
 // ////////////////////////////////////////////////
 // Javascript Browserify, Watchify, Babel, React
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
@@ -121,7 +125,7 @@ gulp.task('watch', function() {
 });
 
 // ////////////////////////////////////////////////
-// Watch Tasks
+// Critical CSS
 // ////////////////////////////////////////////////
 gulp.task('critical', function () {
     critical.generate({
@@ -134,10 +138,43 @@ gulp.task('critical', function () {
         height: 480
     });
 });
-//gulp critical
 
+// ////////////////////////////////////////////////
+// Clear Cashing
+// ////////////////////////////////////////////////
 gulp.task('clear', function (done) {
   return cache.clearAll(done);
 });
 
-gulp.task('default', ['js', 'styles', 'images' , 'browserSync', 'watch']);
+gulp.task('default', ['clear', 'js', 'styles', 'images' , 'browserSync', 'watch']);
+
+
+// ////////////////////////////////////////////////
+// Minify HTML
+// ////////////////////////////////////////////////
+gulp.task('minifyHTML', function() {
+  return gulp.src('public/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'))
+});
+
+// ////////////////////////////////////////////////
+// Minify CSS
+// ////////////////////////////////////////////////
+gulp.task('minifyCSS', function() {
+  return gulp.src('public/css/*.css')
+    .pipe(cssmin())
+    .pipe(gulp.dest('dist'))
+});
+
+// ////////////////////////////////////////////////
+// Minify JS
+// ////////////////////////////////////////////////
+gulp.task('minifyJS', function() {
+  return gulp.src('public/js/*.js')
+    .pipe(jsmin())
+    .pipe(gulp.dest('dist'))
+});
+
+
+gulp.task('build', ['clear', 'minifyHTML', 'minifyCSS' , 'minifyJS']);
