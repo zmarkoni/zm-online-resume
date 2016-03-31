@@ -1,4 +1,4 @@
-/////////// Ovo mi je u stvari DIST gde pozivam sve js fajlove
+//Entry point for application
 
 var $ = require('jquery');
 
@@ -6,18 +6,11 @@ var WebFont = require('webfontloader');
 var TemplateRunner = require('./src/modules/template-load/runner.js');
 var HeaderRunner = require('./src/modules/header/runner.js');
 var NavigationRunner = require('./src/modules/navigation/runner.js');
-//var ScrollRunner      = require('./src/modules/scroll-watch/runner.js');
-// var WidgetRunner     = require('./src/modules/widget/runner.js');
-
-
-var test = 'develop';
 
 var Application = function() {
-console.log(test);
+
     new HeaderRunner();
     new NavigationRunner();
-    //new ScrollRunner();
-    // new WidgetRunner();
 
     //Load CSS asynchronly
     var cb = function() {
@@ -25,7 +18,6 @@ console.log(test);
         l.rel = 'stylesheet';
         l.href = 'css/style.css';
         var h = document.getElementsByTagName('head')[0];
-        // h.parentNode.insertBefore(l, h);
         h.appendChild(l);
     };
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -44,6 +36,7 @@ console.log(test);
         }
     });
 
+    //Include templates
     new TemplateRunner();
 };
 

@@ -8,14 +8,7 @@ var Sandbox = {
     },
     template: function(html, container) {
         return new Template(html, container);
-    },
-    parseHtml: function(html) {
-        console.log(html);
-        return {
-            // gulp_inject: html //does not work ????
-            gulp_inject: '/src/templates/about.html'
-        };
-    },
+    }
 
 };
 
