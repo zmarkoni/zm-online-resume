@@ -9469,10 +9469,10 @@ var NavigationRunner = require('./src/modules/navigation/runner.js');
 // var WidgetRunner     = require('./src/modules/widget/runner.js');
 
 
-
+var test = 'develop';
 
 var Application = function() {
-
+console.log(test);
     new HeaderRunner();
     new NavigationRunner();
     //new ScrollRunner();
