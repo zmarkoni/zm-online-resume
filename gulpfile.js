@@ -20,6 +20,7 @@ var htmlmin = require('gulp-htmlmin');
 var cssmin = require('gulp-cssmin');
 var jsmin = require('gulp-jsmin');
 
+// var zzz= test;
 // add custom browserify options here
 var customOpts = {
     entries: ['./src/js/app.js'],
