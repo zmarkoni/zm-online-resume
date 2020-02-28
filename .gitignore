@@ -34,7 +34,7 @@ bower_components/
 .sass-cache
 *.css.map
 maps/
-
+.idea/
 # Compiled Files #
 ######################
 public/maps/
