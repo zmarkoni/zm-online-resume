@@ -38,7 +38,7 @@
     "events": "^1.1.0",
     "google-maps-api": "^2.0.1",
     "inherits": "^2.0.1",
-    "jquery": "^2.1.4",
+    "jquery": "^3.4.0",
     "jquery-easing": "0.0.1",
     "scrollwatch": "^1.1.0",
     "webfontloader": "^1.6.24"
